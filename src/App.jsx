@@ -1,11 +1,13 @@
-
+import Header from './Components/Header'
 import './App.css'
 
 function App() {
 
   return (
     <>
-     <h1>PokeSearch</h1>
+    <Header />
+    <h1 className='font-bold'>PokeSearch</h1>
+
     </>
   )
 }
