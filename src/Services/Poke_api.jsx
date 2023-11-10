@@ -9,10 +9,11 @@ const PokeApi = () =>{
 
     const [post, setPost] = useState(null)
     useEffect(() =>{
-        axios.get(apiUrl).then((responde) =>{
+        axios.get(apiUrl).then((response) =>{
             setPost(response.data)
+            console.log(post)
         })
-    }, [])
+    }, [''])
     if (!post) return null
     return(
         <div>
