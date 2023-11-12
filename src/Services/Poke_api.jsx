@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 
-const apiUrl = 'https://pokeapi.co/api/v2/pokemon/ditto'
+const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20&offset=20'
 
 const PokeApi = () =>{
 
@@ -11,7 +11,8 @@ const PokeApi = () =>{
     useEffect(() =>{
         axios.get(apiUrl).then((response) =>{
             setPost(response.data)
-            console.log(post)
+            const pokeData = response.data
+            console.log(pokeData)
         })
     }, [''])
     if (!post) return null
