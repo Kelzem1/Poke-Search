@@ -7,8 +7,9 @@ function App() {
 
   return (
     <>
-    <h1 className='font-bold'>PokeSearch</h1>
     <Header />
+    <h1 className='font-bold'>PokeSearch</h1>
+   
     <Search />
     
     
