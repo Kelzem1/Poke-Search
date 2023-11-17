@@ -3,23 +3,39 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 
-const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20&offset=20'
+const apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'
 
 const PokeApi = () =>{
 
-    const pokeData = {}
-    const [post, setPost] = useState(null)
+    const [post, setPost] = useState([])
+
     useEffect(() =>{
-        axios.get(apiUrl).then((response) =>{
-            setPost(response.data)
-            console.log(response.data)
-            response.data = pokeData
-        })
-        
-    }, [''])
-    if (!post) return null
+        const fetchData = async () =>{
+            try{
+                const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+                setPost(response.data.results)
+                console.log(post)
+            }catch (error) {
+                console.error('No va esto illo', error)
+            }
+        }
+
+        const desctData = async () =>{
+            try{
+                const response = await axios.get('')
+                setPost(response.data.results)
+                console.log(post)
+            }catch (error) {
+                console.error('No va esto illo', error)
+            }
+        }
+
+        fetchData()
+    }, [])
     return(
         <div>
+            <p>{post[7].name}</p>
+
         </div>
         
     )
