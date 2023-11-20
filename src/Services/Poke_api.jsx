@@ -15,6 +15,8 @@ const PokeApi = () =>{
             try{
                 const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
                 setPost(response.data.results)
+                console.log(post)
+
             }catch (error) {
                 console.error('No va esto illo', error)
             }
@@ -23,10 +25,11 @@ const PokeApi = () =>{
       
 
         fetchData()
-    }, [])
+    }, [''])
     return(
         <div>
-            <li>{post[2].name}</li>
+            
+
 
         </div>
         
