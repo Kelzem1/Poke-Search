@@ -9,11 +9,12 @@ const PokeApi = () =>{
 
     
     const [post, setPost] = useState([''])
+    const pokeName = 2
 
     useEffect(() =>{
         const fetchData = async () =>{
             try{
-                const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+                const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=2')
                 setPost(response.data.results)
                 console.log(post)
 
@@ -22,15 +23,12 @@ const PokeApi = () =>{
             }
         }
 
-      
 
-        fetchData()
+        fetchData(post)
     }, [''])
+    
     return(
         <div>
-            
-
-
         </div>
         
     )
