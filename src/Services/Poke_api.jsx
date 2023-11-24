@@ -1,5 +1,3 @@
-import axios from "axios";
-import { list } from "postcss";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -40,10 +38,13 @@ const PokeApi = () =>{
                 {
                     pokeName.map(pokemon =>{
                         return(
-                            <div>
-                                <img src={pokemon.img} alt={pokemon.name} />
-                                <p>{pokemon.name}</p>
-                                <p>{pokemon.id}</p>
+                            <div className="bg-yellow-100 p-4 flex w-96">
+                                
+                                    <img className="bg-black" src={pokemon.img} alt={pokemon.name} />
+                                    <p className="flex-col">{pokemon.name}</p>
+                                    <p>{pokemon.id}</p> 
+                                
+                               
                             </div>
                         )
                     })
