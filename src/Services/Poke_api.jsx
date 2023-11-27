@@ -19,11 +19,16 @@ const PokeApi = () =>{
             const newPokemones = results.map( async (pokemon) => {
                 const response = await fetch(pokemon.url)
                 const poke = await response.json()
+                console.log(poke)
 
                 return {
                     id: poke.id,
                     name: poke.name,
-                    img: poke.sprites.other.dream_world.front_default
+                    img: poke.sprites.other.dream_world.front_default,
+                    tipo: poke.types[0].type.name,
+                    height: poke.height,
+                    weight: poke.weight,
+                    abilities: poke.abilities[0].ability.name
                 }
             })
             console.log(await (Promise.all(newPokemones)))
@@ -35,12 +40,12 @@ const PokeApi = () =>{
     
     return(
         <div>
-            <div>
+            <div className="flex p-1 gap-5">
                 {
                     pokeName.map(pokemon =>{
                         return(
                             // eslint-disable-next-line react/jsx-key
-                            <PokeCard id={pokemon.id} name={pokemon.name} img={pokemon.img} />
+                            <PokeCard id={pokemon.id} name={pokemon.name} img={pokemon.img} tipo={pokemon.tipo} height={pokemon.height} weight={pokemon.weight} abilities={pokemon.abilities} />
                         )
                     })
                 }
