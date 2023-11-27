@@ -13,7 +13,6 @@ function App() {
    
     <Search />
     <PokeCard />
-    
     <PokeApi />
 
     </>

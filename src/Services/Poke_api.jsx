@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import PokeCard from "../Components/Poke_cards";
 
 
 
@@ -38,14 +39,8 @@ const PokeApi = () =>{
                 {
                     pokeName.map(pokemon =>{
                         return(
-                            <div className="bg-yellow-100 p-4 flex w-96">
-                                
-                                    <img className="bg-black" src={pokemon.img} alt={pokemon.name} />
-                                    <p className="flex-col">{pokemon.name}</p>
-                                    <p>{pokemon.id}</p> 
-                                
-                               
-                            </div>
+                            // eslint-disable-next-line react/jsx-key
+                            <PokeCard id={pokemon.id} name={pokemon.name} img={pokemon.img} />
                         )
                     })
                 }
