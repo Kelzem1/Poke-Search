@@ -1,9 +1,9 @@
-const Search = ({pokemon}) =>{
+const Search = () =>{
     return(
         <div className="flex-col">
             <input className="" placeholder="Nombre"></input>
             {
-                pokemon
+               
             }
         </div>
     )

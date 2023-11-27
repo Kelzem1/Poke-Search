@@ -20,6 +20,7 @@ const PokeApi = () =>{
                 const response = await fetch(pokemon.url)
                 const poke = await response.json()
                 console.log(poke)
+                
 
                 return {
                     id: poke.id,
@@ -40,7 +41,7 @@ const PokeApi = () =>{
     
     return(
         <div>
-            <div className="flex p-1 gap-5">
+            <div className="bg-black h-full grid grid-cols-5 p-5 gap-5">
                 {
                     pokeName.map(pokemon =>{
                         return(
