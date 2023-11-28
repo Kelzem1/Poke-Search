@@ -3,8 +3,8 @@ const PokeCard = ({title, id, img, name, tipo, height, weight, abilities, hp, at
         <div className="justify-center align-middle bg-card-black w-full h-full rounded">
             <div className="m-1 flex-col justify-center align-middle w-1/2}">
                 <span className="text-amber-500">#{id}</span>
-                    <div className=" flex justify-center align-middle m-auto w-32 h-32 object-fill bg-amber-500 rounded-full opacity-70 hover:opacity-100 hover:object-contain ">
-                        <img className="" src={img} alt={id} width={200} height={200}></img>
+                    <div className="shadow-xl shadow-amber-900 flex justify-center align-middle m-auto w-28 h-28 bg-amber-500 rounded-full opacity-80 hover:opacity-100 ">
+                        <img className="w-16 hover:w-48" src={img} alt={id} width={200} height={200}></img>
                     </div>
                 
                 <h1 className=" text-yellow-100 font-bold pt-4 capitalize flex justify-center align-middle">{name}</h1>
