@@ -19,7 +19,6 @@ const PokeApi = () =>{
             const newPokemones = results.map( async (pokemon) => {
                 const response = await fetch(pokemon.url)
                 const poke = await response.json()
-                console.log(poke)
                 
 
                 return {
@@ -32,7 +31,6 @@ const PokeApi = () =>{
                     abilities: poke.abilities[0].ability.name
                 }
             })
-            console.log(await (Promise.all(newPokemones)))
 
             setPokeName(await (Promise.all(newPokemones)))
        }
@@ -46,7 +44,14 @@ const PokeApi = () =>{
                     pokeName.map(pokemon =>{
                         return(
                             // eslint-disable-next-line react/jsx-key
-                            <PokeCard id={pokemon.id} name={pokemon.name} img={pokemon.img} tipo={pokemon.tipo} height={pokemon.height} weight={pokemon.weight} abilities={pokemon.abilities} />
+                            <PokeCard 
+                            id={pokemon.id} 
+                            name={pokemon.name} 
+                            img={pokemon.img} 
+                            tipo={pokemon.tipo} 
+                            height={pokemon.height} 
+                            weight={pokemon.weight} 
+                            abilities={pokemon.abilities} />
                         )
                     })
                 }
