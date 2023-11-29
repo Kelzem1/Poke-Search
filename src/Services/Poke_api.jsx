@@ -28,7 +28,9 @@ const PokeApi = () =>{
                     tipo: poke.types[0].type.name,
                     height: poke.height,
                     weight: poke.weight,
-                    abilities: poke.abilities[0].ability.name
+                    abilities: poke.abilities[0].ability.name,
+
+    
                 }
             })
 
