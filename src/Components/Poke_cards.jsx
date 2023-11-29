@@ -1,7 +1,9 @@
+
+
 const PokeCard = ({title, id, img, name, tipo, height, weight, abilities, hp, attack, defense, specialAttack, specialDefense, speed}) =>{
     return(
-        <div className="justify-center align-middle bg-card-black w-full h-full rounded">
-            <div className="m-1 flex-col justify-center align-middle w-1/2}">
+        <div className="justify-center align-middle bg-black w-full h-96 rounded backdrop-blur-sm backdrop-filter bg-opacity-50 border-amber-300 border-2">
+            <div className="m-1 flex-col justify-center align-middle}">
                 <span className="text-amber-500">#{id}</span>
                     <div className="shadow-xl shadow-amber-900 flex justify-center align-middle m-auto w-28 h-28 bg-amber-500 rounded-full opacity-80 hover:opacity-100 ">
                         <img className="w-16 hover:w-48" src={img} alt={id} width={200} height={200}></img>
