@@ -1,6 +1,6 @@
 
 
-const PokeCard = ({title, id, img, name, tipo, height, weight, abilities, hp, attack, defense, specialAttack, specialDefense, speed,}) =>{
+const PokeCard = ({id, img, name, tipo, height, weight, abilities,}) =>{
     return(
         <div className="justify-center align-middle bg-black w-full h-96 rounded backdrop-blur-md backdrop-filter bg-opacity-70 border-amber-300 border-2">
             <div className="m-1 flex-col justify-center align-middle}">
@@ -17,16 +17,6 @@ const PokeCard = ({title, id, img, name, tipo, height, weight, abilities, hp, at
                 <span className="p-1">Height: {height}</span>
                 <span className="p-1">Weight: {weight}</span>
                 <span className="p-1 capitalize">Ability: {abilities}</span>
-            </div>
-
-            <div>
-                <span>{hp}</span>
-                <span>{attack}</span>
-                <span>{defense}</span>
-                <span>{specialAttack}</span>
-                <span>{specialDefense}</span>
-                <span>{speed}</span>
-
             </div>
 
         </div>
