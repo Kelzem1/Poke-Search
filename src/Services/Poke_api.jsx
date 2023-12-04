@@ -9,6 +9,7 @@ const PokeApi = () =>{
 
     
     const [pokeName, setPokeName] = useState([])
+    const busqApi = [pokemonName, setPokemonName] = useState()
 
     useEffect(() =>{
        const getPokemon = async () =>{
@@ -36,6 +37,12 @@ const PokeApi = () =>{
             })
 
             setPokeName(await (Promise.all(newPokemones)))
+
+            const buscaPoke = async () =>{
+                const response = await(`https://pokeapi.co/api/v2/${pokemonName}?`)
+                const pokeBus = await response.json()
+                console.log(pokeBus)
+            }
        }
        getPokemon()
     }, [])
