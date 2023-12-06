@@ -9,7 +9,7 @@ const PokeApi = () =>{
 
     
     const [pokeName, setPokeName] = useState([])
-    const busqApi = [pokemonName, setPokemonName] = useState()
+    const pName = 'Pikachu'
 
     useEffect(() =>{
        const getPokemon = async () =>{
@@ -39,10 +39,15 @@ const PokeApi = () =>{
             setPokeName(await (Promise.all(newPokemones)))
 
             const buscaPoke = async () =>{
-                const response = await(`https://pokeapi.co/api/v2/${pokemonName}?`)
+                const response = await(`https://pokeapi.co/api/v2/${pName}?`)
                 const pokeBus = await response.json()
                 console.log(pokeBus)
+                return{
+                    namePoke : pokeBus.name
+                }
             }
+
+            buscaPoke( await(Promise.all(buscaPoke)))
        }
        getPokemon()
     }, [])
