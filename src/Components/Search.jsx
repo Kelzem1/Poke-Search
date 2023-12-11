@@ -1,6 +1,5 @@
 const Search = () =>{
 
-    const onSubmit = ''
 
     const placeHolder = 'nombre, id, type.'
     return(

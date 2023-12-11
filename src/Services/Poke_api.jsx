@@ -38,16 +38,6 @@ const PokeApi = () =>{
 
             setPokeName(await (Promise.all(newPokemones)))
 
-            const buscaPoke = async () =>{
-                const response = await(`https://pokeapi.co/api/v2/${pName}?`)
-                const pokeBus = await response.json()
-                console.log(pokeBus)
-                return{
-                    namePoke : pokeBus.name
-                }
-            }
-
-            buscaPoke( await(Promise.all(buscaPoke)))
        }
        getPokemon()
     }, [])
