@@ -5,13 +5,17 @@ const pokeBusc = 'Pikachu'
 const apiBusqueda = 'https://pokeapi.co/api/v2/pokemon/'
 
 const SearchPoke = () =>{
+
     const [search, setSearch] = useState([])
-    useEffect(() =>{
-    const buscaApi = async () =>{
+
+
+    useEffect(() => {
+    const buscaApi = async () => {
+
         const apiPoke = await axios.get(`${apiBusqueda}/${pokeBusc}`)
 
-        setSearch(await (Promise.all(apiPoke.results.name)))
-        console.log(apiPoke)
+        setSearch(apiPoke.data)
+        console.log(search)
     }
 
     buscaApi()
@@ -21,4 +25,5 @@ return(
     <h1>Test</h1>
 )
 }
+export default SearchPoke
 
