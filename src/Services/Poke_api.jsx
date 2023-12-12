@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import PokeCard from "../Components/Poke_cards";
-
+import { URL_LIST_POKEMONS } from "../urlApis/apisUrls";
 
 
 
@@ -9,38 +9,37 @@ const PokeApi = () =>{
 
     
     const [pokeName, setPokeName] = useState([])
-    const pName = 'Pikachu'
 
     useEffect(() =>{
-       const getPokemon = async () =>{
-            const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
-            const listaPoke = await response.json()
-            const { results } = listaPoke
-
-
-            const newPokemones = results.map( async (pokemon) => {
-                const response = await fetch(pokemon.url)
-                const poke = await response.json()
-                console.log(poke)
-
-
-                return {
-                    id: poke.id,
-                    name: poke.name,
-                    img: poke.sprites.other.dream_world.front_default,
-                    tipo: poke.types[0].type.name,
-                    height: poke.height,
-                    weight: poke.weight,
-                    abilities: poke.abilities[0].ability.name,
-                }
-
-            })
-
-            setPokeName(await (Promise.all(newPokemones)))
-
-       }
-       getPokemon()
-    }, [])
+        const getPokemon = async () =>{
+             const response = await fetch(`${URL_LIST_POKEMONS}`)
+             const listaPoke = await response.json()
+             const { results } = listaPoke
+ 
+ 
+             const newPokemones = results.map( async (pokemon) => {
+                 const response = await fetch(pokemon.url)
+                 const poke = await response.json()
+                 console.log(poke)
+ 
+ 
+                 return {
+                     id: poke.id,
+                     name: poke.name,
+                     img: poke.sprites.other["official-artwork"].front_default,
+                     tipo: poke.types[0].type.name,
+                     height: poke.height,
+                     weight: poke.weight,
+                     abilities: poke.abilities[0].ability.name,
+                 }
+ 
+             })
+ 
+             setPokeName(await (Promise.all(newPokemones)))
+ 
+        }
+        getPokemon()
+     }, [])
     
     return(
         <div>
