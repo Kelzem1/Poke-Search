@@ -3,7 +3,7 @@
 const PokeCard = ({id, img, name, tipo, height, weight, abilities,}) =>{
 
     const PesoReal = (weight / 10).toFixed(1)
-
+    const AltuReal = (height / 10).toFixed(1)
     return(
         <div className="justify-center align-middle bg-sky-950 w-full h-full rounded-md backdrop-blur-xl backdrop-filter bg-opacity-30 shadow-md shadow-zinc-900">
             <div className="">
@@ -28,8 +28,8 @@ const PokeCard = ({id, img, name, tipo, height, weight, abilities,}) =>{
                 <p className="p-2 capitalize">Ability: {abilities}</p>
                 
                 <p className="p-2">Height:
-                <progress value={height / 10} max={20} />
-                 {height}
+                <progress value={AltuReal} max={20.0} />
+                 {AltuReal}
                  </p>
                 <p className="p-2">Weight:
                 <progress value={PesoReal} max={999.9}/>
