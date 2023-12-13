@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import PokeCard from "../Components/Poke_cards";
 import { URL_LIST_POKEMONS } from "../urlApis/apisUrls";
-import { URL_SPECIES } from "../urlApis/apisUrls";
+
 
 
 
@@ -11,7 +11,7 @@ const PokeApi = () =>{
     
     const [pokeName, setPokeName] = useState([])
     const [pokeColor, setPokeColor] = useState([])
-    console.log(pokeColor)
+    //console.log(pokeColor)
 
     useEffect(() =>{
         const getPokemon = async () =>{
@@ -20,10 +20,16 @@ const PokeApi = () =>{
              const { results } = listaPoke
  
  
-             const newPokemones = results.map( async (pokemon) => {
-                 const response = await fetch(pokemon.url)
+             const newPokemones = results.map( async (pepe) => {
+                 const response = await fetch(pepe.url)
                  const poke = await response.json()
                  //console.log(poke)
+
+                 const speciesRes = await fetch(poke.species.url)
+                 const speciesData = await speciesRes.json()
+                 console.log(speciesData)
+                
+                 
  
  
                  return {
@@ -34,32 +40,25 @@ const PokeApi = () =>{
                      height: poke.height,
                      weight: poke.weight,
                      abilities: poke.abilities[0].ability.name,
+                     species: {
+                        color : speciesData.color.name
+                     }
                  }
+                
  
              })
              
  
              setPokeName(await (Promise.all(newPokemones)))
 
-             
-
             
- 
         }
         getPokemon()
      }, [])
 
-     useEffect(() =>{
-        const getColor = async () =>{
-            const res = await fetch(`${URL_SPECIES}`)
-            const speList = await res.json()
-            const { results } = speList
-            
-             setPokeColor(await (Promise.all(getColor)))
-        }
+  
 
-       
-     }, [])
+
 
     
     return(
@@ -78,6 +77,7 @@ const PokeApi = () =>{
                             height={pokemon.height} 
                             weight={pokemon.weight} 
                             abilities={pokemon.abilities}
+                            species={pokemon.species.color}
 
                             />
                         )

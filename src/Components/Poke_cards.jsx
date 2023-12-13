@@ -1,10 +1,12 @@
 import '../App.css'
 
-const PokeCard = ({id, img, name, tipo, height, weight, abilities,}) =>{
+const PokeCard = ({id, img, name, tipo, height, weight, abilities, species}) =>{
 
     const PesoReal = (weight / 10).toFixed(1)
     const AltuReal = (height / 10).toFixed(1)
+    const wtfisthisshit = species
     return(
+       
         <div className="justify-center align-middle bg-sky-950 w-full h-full rounded-md backdrop-blur-xl backdrop-filter bg-opacity-30 shadow-md shadow-zinc-900">
             <div className="w-full p-3">
                 
@@ -35,6 +37,7 @@ const PokeCard = ({id, img, name, tipo, height, weight, abilities,}) =>{
                  </p>
                 <p className="text-yellow-100 capitalize p-2 font-bold">Weight: {PesoReal} Kgs
                  </p>
+                 <p>Color: {species}</p>
                 
             </div>
 
