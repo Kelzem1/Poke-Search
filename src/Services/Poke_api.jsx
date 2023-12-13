@@ -11,7 +11,7 @@ const PokeApi = () =>{
     
     const [pokeName, setPokeName] = useState([])
     const [pokeColor, setPokeColor] = useState([])
-    //console.log(pokeColor)
+    console.log(pokeColor)
 
     useEffect(() =>{
         const getPokemon = async () =>{
@@ -24,10 +24,11 @@ const PokeApi = () =>{
                  const response = await fetch(pepe.url)
                  const poke = await response.json()
                  //console.log(poke)
-
+                //Datos con completos aqui abajo.
                  const speciesRes = await fetch(poke.species.url)
                  const speciesData = await speciesRes.json()
-                 console.log(speciesData)
+                 //console.log(speciesData)
+                 setPokeColor(speciesData.color.name)
                 
                  
  
