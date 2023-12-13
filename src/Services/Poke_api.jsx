@@ -43,7 +43,7 @@ const PokeApi = () =>{
     
     return(
         <div>
-            <div className="bg-black h-full grid grid-cols-1 p-10 gap-7 xl:grid-cols-3 ">
+            <div className="bg-black h-full grid font-Mulish font grid-cols-1 p-10 gap-7 xl:grid-cols-3 ">
                 {
                     pokeName.map(pokemon =>{
                         return(

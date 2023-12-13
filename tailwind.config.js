@@ -7,8 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'card-black': '#474747'
+        'card-black': '#474747',
       },
+      fontFamily: {
+        'Mulish' : ['Mulish', 'sans-serif']
+      }
     },
   },
   plugins: [],
