@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import PokeCard from "../Components/Poke_cards";
 import { URL_LIST_POKEMONS } from "../urlApis/apisUrls";
+import { URL_SPECIES } from "../urlApis/apisUrls";
 
 
 
@@ -9,6 +10,8 @@ const PokeApi = () =>{
 
     
     const [pokeName, setPokeName] = useState([])
+    const [pokeColor, setPokeColor] = useState([])
+    console.log(pokeColor)
 
     useEffect(() =>{
         const getPokemon = async () =>{
@@ -20,7 +23,7 @@ const PokeApi = () =>{
              const newPokemones = results.map( async (pokemon) => {
                  const response = await fetch(pokemon.url)
                  const poke = await response.json()
-                 console.log(poke)
+                 //console.log(poke)
  
  
                  return {
@@ -34,12 +37,30 @@ const PokeApi = () =>{
                  }
  
              })
+             
  
              setPokeName(await (Promise.all(newPokemones)))
+
+             
+
+            
  
         }
         getPokemon()
      }, [])
+
+     useEffect(() =>{
+        const getColor = async () =>{
+            const res = await fetch(`${URL_SPECIES}`)
+            const speList = await res.json()
+            const { results } = speList
+            
+             setPokeColor(await (Promise.all(getColor)))
+        }
+
+       
+     }, [])
+
     
     return(
         <div>

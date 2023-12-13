@@ -1,26 +1,29 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { URL_POKEMON } from "../urlApis/apisUrls"
+import {URL_LIST_POKEMONS}  from "../urlApis/apisUrls"
 
 
 
-const SearchPoke = () =>{
+const SearchPoke = ( { card }) =>{
 
     const [search, setSearch] = useState([])
-    console.log(search)
+    //console.log(search)
 
     useEffect(() => {
     const buscaApi = async () => {
 
-        const apiPoke = await axios.get(`${URL_POKEMON}/{'Pikachu'}`)
+        const apiPoke = await axios.get(`${URL_LIST_POKEMONS}`)
+        
 
-        setSearch(apiPoke.data.results.name)
+        setSearch(apiPoke.data)
         
     }
 
     buscaApi()
     
 }, [])
+
+
 
 return(
     <h1>Test</h1>
