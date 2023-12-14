@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+
+
 export default {
   content: [
     "./index.html",
@@ -11,6 +14,9 @@ export default {
       },
       fontFamily: {
         'Mulish' : ['Mulish', 'sans-serif']
+      },
+      backgroundColor: {
+        'red': '#FF0000'
       }
     },
   },

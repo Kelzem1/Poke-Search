@@ -11,7 +11,7 @@ const PokeApi = () =>{
     
     const [pokeName, setPokeName] = useState([])
     const [pokeColor, setPokeColor] = useState([])
-    console.log(pokeColor)
+    //console.log(pokeColor)
 
     useEffect(() =>{
         const getPokemon = async () =>{
@@ -63,8 +63,8 @@ const PokeApi = () =>{
 
     
     return(
-        <div>
-            <div className="bg-black h-full grid font-Mulish font grid-cols-1 p-10 gap-7 xl:grid-cols-3 ">
+        <div className="bg-black">
+            <div className='bg-${color} grid w-full font-Mulish grid-cols-1 p-5 gap-7 xl:grid-cols-3 xl:w-fit xl:m-auto xl:justify-center'>
                 {
                     pokeName.map(pokemon =>{
                         return(
@@ -78,7 +78,7 @@ const PokeApi = () =>{
                             height={pokemon.height} 
                             weight={pokemon.weight} 
                             abilities={pokemon.abilities}
-                            species={pokemon.species.color}
+                            color={pokemon.species.color}
 
                             />
                         )

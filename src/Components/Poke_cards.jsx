@@ -1,23 +1,25 @@
 import '../App.css'
 
-const PokeCard = ({id, img, name, tipo, height, weight, abilities, species}) =>{
+const PokeCard = ({id, img, name, tipo, height, weight, abilities, color}) =>{
 
     const PesoReal = (weight / 10).toFixed(1)
     const AltuReal = (height / 10).toFixed(1)
-    const wtfisthisshit = species
+   
     return(
        
-        <div className="justify-center align-middle bg-sky-950 w-full h-full rounded-md backdrop-blur-xl backdrop-filter bg-opacity-30 shadow-md shadow-zinc-900">
-            <div className="w-full p-3">
+        <div 
+         className={`justify-center h-full bg-${color} rounded-md shadow-md shadow-zinc-200`}>
+            <div className={`w-full`}>
                 
                     <div className="grid grid-cols-2 m-auto opacity-100 hover:opacity-100 transition-all p-2">
-                        <div>
-                           <h1 className="text-amber-50 font-extrabold opacity-90 m-auto h-5/6 text-9xl mt-5">#{id}</h1>
-                            <h1 className=" text-yellow-100 font-bold m-auto capitalize text-5xl">{name}</h1> 
+
+                        <div className='flex-col justify-center m-auto'>
+                           <h1 className="text-amber-50 font-extrabold opacity-90 m-auto text-7xl mt-5 xl:text-9xl">#{id}</h1>
+                            <h1 className=" text-yellow-100 font-bold m-auto capitalize text-4xl">{name}</h1> 
                         </div>
                         
                         
-                        <img className="object-contain absolute right-1 h-44 hover:brightness-125 transition-all w-54" src={img} alt={id}></img>
+                        <img className="object-contain right-5 h-44 hover:brightness-125 flex m-auto justify-center transition-all w-46 xl:h-64 xl:p-3" src={img} alt={id}></img>
                         
                         
                     </div>
@@ -26,18 +28,26 @@ const PokeCard = ({id, img, name, tipo, height, weight, abilities, species}) =>{
                 
             </div>
 
-            <div className="text-yellow-50 p-1 m-auto ml-3 mt-3 flex-col">
-            
-                <p className="text-yellow-100 capitalize p-2 font-bold">Type: 
-                {tipo}</p>
+            <div className="text-yellow-50 grid grid-cols-2 pb-6 m-auto mt-1">
 
-                <p className="text-yellow-100 capitalize p-2 font-bold">Ability: {abilities}</p>
+                <div className='flex-col justify-center align-middle m-auto text-lg'>
+                    <p className="text-yellow-100 capitalize font-bold">Type: 
+                    {tipo}</p>
+
+                    <p className="text-yellow-100 capitalize font-bold">Ability: {abilities}</p>
+                    
+                    <p className="text-yellow-100 capitalize font-bold">Height: {AltuReal} mtrs
+                    </p>
+                    <p className="text-yellow-100 capitalize font-bold">Weight: {PesoReal} Kgs
+                    </p>
+                    <p>Color: {color}</p>
+                </div>
+
+
+                <div className='flex-col justify-center align-middle m-auto'>
+                    <h1>hola</h1>
+                </div>
                 
-                <p className="text-yellow-100 capitalize p-2 font-bold">Height: {AltuReal} mtrs
-                 </p>
-                <p className="text-yellow-100 capitalize p-2 font-bold">Weight: {PesoReal} Kgs
-                 </p>
-                 <p>Color: {species}</p>
                 
             </div>
 
