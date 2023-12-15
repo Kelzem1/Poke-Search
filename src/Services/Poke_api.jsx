@@ -23,11 +23,11 @@ const PokeApi = () =>{
              const newPokemones = results.map( async (pepe) => {
                  const response = await fetch(pepe.url)
                  const poke = await response.json()
-                 //console.log(poke)
+                 console.log(poke)
                 //Datos con completos aqui abajo.
                  const speciesRes = await fetch(poke.species.url)
                  const speciesData = await speciesRes.json()
-                 //console.log(speciesData)
+                
                  setPokeColor(speciesData.color.name)
                 
                  
@@ -43,7 +43,16 @@ const PokeApi = () =>{
                      abilities: poke.abilities[0].ability.name,
                      species: {
                         color : speciesData.color.name
-                     }
+                     },
+                     hp: poke.stats[0].base_stat,
+                     attack: poke.stats[1].base_stat,
+                     defense: poke.stats[2].base_stat,
+                     specialAttack: poke.stats[3].base_stat,
+                     specialDefense: poke.stats[4].base_stat,
+                     speed: poke.stats[5].base_stat
+                        
+
+                     
                  }
                 
  
@@ -79,7 +88,13 @@ const PokeApi = () =>{
                             weight={pokemon.weight} 
                             abilities={pokemon.abilities}
                             color={pokemon.species.color}
-
+                            hp={pokemon.hp}
+                            attack={pokemon.attack}
+                            defense={pokemon.defense}
+                            specialAttack={pokemon.specialAttack}
+                            specialDefense={pokemon.specialDefense}
+                            speed={pokemon.speed}
+                            
                             />
                         )
                     })

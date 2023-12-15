@@ -1,9 +1,12 @@
 import '../App.css'
 
-const PokeCard = ({id, img, name, tipo, height, weight, abilities, color}) =>{
+const PokeCard = (
+    {id, img, name, tipo, height, weight, abilities, color, hp, attack, defense, specialAttack, specialDefense, speed }
+    ) =>{
 
     const PesoReal = (weight / 10).toFixed(1)
     const AltuReal = (height / 10).toFixed(1)
+   
    
     return(
        
@@ -40,12 +43,22 @@ const PokeCard = ({id, img, name, tipo, height, weight, abilities, color}) =>{
                     </p>
                     <p className="text-yellow-100 capitalize font-bold">Weight: {PesoReal} Kgs
                     </p>
-                    <p>Color: {color}</p>
+                    
                 </div>
 
 
                 <div className='flex-col justify-center align-middle m-auto'>
-                    <h1>hola</h1>
+                    <h3>Hp: <progress value={hp} max={110} /></h3>
+                    <h3>Attack:<progress value={attack} max={110} /></h3>
+                    <h3>Defense: <progress value={defense} max={110} /></h3>
+                    <h3>Special Attack: <progress value={specialAttack} max={110} /></h3>
+                    <h3>Special Defense:<progress value={specialDefense} max={110} /></h3>
+                    <h3>Speed: <progress value={speed} max={110} /></h3>
+                    
+                    
+                    
+                    
+                    
                 </div>
                 
                 
