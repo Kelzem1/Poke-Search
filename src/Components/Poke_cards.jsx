@@ -31,23 +31,26 @@ const PokeCard = (
                 
             </div>
 
-            <div className="text-yellow-50 grid grid-cols-2 pb-6 m-auto mt-1">
+            <div className="text-yellow-50 grid grid-rows-2 pb-1">
 
-                <div className='flex-col justify-center align-middle m-auto text-lg'>
-                    <p className="text-yellow-100 capitalize font-bold">Type: 
-                    {tipo}</p>
-
-                    <p className="text-yellow-100 capitalize font-bold">Ability: {abilities}</p>
-                    
-                    <p className="text-yellow-100 capitalize font-bold">Height: {AltuReal} mtrs
-                    </p>
-                    <p className="text-yellow-100 capitalize font-bold">Weight: {PesoReal} Kgs
-                    </p>
+                <div className='grid content-normal text-center'>
+                    <div className='bg-black flex-col'> 
+                    <h2 className="text-yellow-100 capitalize font-bold"> Type: {tipo}</h2>
+                    </div>
+                    <div>
+                        <h2 className="text-yellow-100 capitalize font-bold">Ability: {abilities}</h2>
+                    </div>
+                    <div>
+                        <h2 className="text-yellow-100 capitalize font-bold">Height: {AltuReal} mtrs</h2>
+                    </div>
+                    <div>
+                        <h2 className="text-yellow-100 capitalize font-bold">Weight: {PesoReal} Kgs</h2>
+                    </div>
                     
                 </div>
 
 
-                <div className='flex-col justify-center align-middle m-auto'>
+                <div className='flex-col p-5 font-bold text-lg'>
                     <h3>Hp: <progress value={hp} max={110} /></h3>
                     <h3>Attack:<progress value={attack} max={110} /></h3>
                     <h3>Defense: <progress value={defense} max={110} /></h3>

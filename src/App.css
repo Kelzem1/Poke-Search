@@ -1,6 +1,16 @@
-progress{
-  background-color: #b6b5b5;
+progress::-webkit-progress-value { background: rgb(213, 204, 157);
+border-radius:2em; }
+progress {
+  width: 100%;
+  display: flex;
+  border-radius: 2em;
+  
 }
+progress::-webkit-progress-bar {
+  background-color: rgba(198, 198, 196, 0.325);
+  border-radius: 2em;
+}
+
 
 .bg-green {
   background: #49d0b0;
