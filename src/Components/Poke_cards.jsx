@@ -11,37 +11,38 @@ const PokeCard = (
     return(
        
         <div
-         className={`justify-center h-full bg-${color} rounded-md shadow-md shadow-zinc-200`}>
-            <div className=''>
+         className={`justify-center h-full bg-${color} rounded-xl shadow-md shadow-zinc-500 hover:-translate-y-3 transition-all ease-in-out duration-300`}>
+            <div className='p-3'>
                 
-                    <div className="grid grid-cols-2">
+                    <div className="grid grid-cols-2 content-center mb-8">
                         <div className='justify-center align-middle m-auto'>
-                                    <h1 className=" text-yellow-100 font-bold capitalize text-4xl p-1 xl:text-5xl ">{name}</h1> 
-                                    <h1 className="text-yellow-100 font-extrabold opacity-50 text-9xl mt-5 xl:text-9xl text-center">#{id}</h1>     
+                                    <h1 className="text-teal-900 font-extrabold opacity-90 text-9xl mt-2 xl:text-9xl text-center">#{id}</h1>  
+                                    <h1 className=" text-teal-900 font-bold capitalize text-4xl p-1 xl:text-4xl ">{name}</h1> 
+                                       
                         </div>
-                                    <img className="hover:brightness-125 flex m-auto justify-center transition-all w-64 h-64" src={img} alt={id}></img>
+                                    <img className="hover:brightness-125 object-fill object-right flex m-auto justify-center transition-all w-64 h-64" src={img} alt={id}></img>
                                             
                      </div>
 
-            <div className="text-slate-900 grid grid-rows-2">
+            <div className="text-slate-900 grid grid-rows-auto gap-8">
 
-                <div className='grid-cols-4 gap-5 align-middle m-auto flex text-center'>
+                <div className='grid-cols-max gap-2 object-cover align-middle flex text-center'>
 
                             <div className='flex-col w-1/4 '>
-                            <h2 className="text-yellow-100 capitalize font-bold"> Type:<br />{tipo}</h2>
+                            <h2 className="text-teal-800 capitalize font-bold"> Type:<br />{tipo}</h2>
                             </div>
                             <div className='flex-col w-1/4 '>
-                                <h2 className="text-yellow-100 capitalize font-bold">Ability:<br />{abilities}</h2>
+                                <h2 className="text-teal-800 capitalize font-bold">Ability:<br />{abilities}</h2>
                             </div>
                             <div className='flex-col w-1/4 '>
-                                <h2 className="text-yellow-100 capitalize font-bold">Height:<br /> {AltuReal} mtrs</h2>
+                                <h2 className="text-teal-800 capitalize font-bold">Height:<br /> {AltuReal} mtrs</h2>
                             </div>
                             <div className='flex-col w-1/4 '>
-                                <h2 className="text-yellow-100 capitalize font-bold">Weight:<br /> {PesoReal} Kgs</h2>
-                         </div>
+                                <h2 className="text-teal-800 capitalize font-bold">Weight:<br /> {PesoReal} Kgs</h2>
+                            </div>
                 </div>
 
-                <div className='flex-col p-3 font-bold text-lg w-full h-full'>
+                <div className='flex-col font-bold text-lg w-full h-full'>
                     <h3>Hp: <progress value={hp} max={110} /></h3>
                     <h3>Attack:<progress value={attack} max={110} /></h3>
                     <h3>Defense: <progress value={defense} max={110} /></h3>
