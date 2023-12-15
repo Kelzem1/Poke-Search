@@ -1,4 +1,4 @@
-progress::-webkit-progress-value { background: rgb(213, 204, 157);
+progress::-webkit-progress-value { background: rgba(22, 22, 22, 0.986);
 border-radius:2em; }
 progress {
   width: 100%;
@@ -7,7 +7,7 @@ progress {
   
 }
 progress::-webkit-progress-bar {
-  background-color: rgba(198, 198, 196, 0.325);
+  background-color: rgba(0, 0, 0, 0.337);
   border-radius: 2em;
 }
 
