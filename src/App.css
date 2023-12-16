@@ -25,7 +25,7 @@ progress::-webkit-progress-bar {
   background: #ffd76f;
 }
 .bg-brown {
-  background: #544726c8;
+  background: #694802;
 }
 .bg-purple {
   background: #9a6fff;
@@ -46,41 +46,43 @@ progress::-webkit-progress-bar {
   background: #999;
 }
 
-.bg-green {
-  background: #49d0b0;
+
+.text-green {
+  color:#49d0b0;
 }
-.bg-red {
-  background: #fa6d6b;
+.text-red {
+  color: #fa6d6b;
 }
-.bg-blue {
-  background: #76befe;
+.text-blue {
+  color: #76befe;
 }
-.bg-yellow {
-  background: #ffd76f;
+.text-yellow {
+  color: #ffd76f;
 }
-.bg-brown {
-  background: #544726c8;
+.text-brown {
+  color: #694802;
 }
-.bg-purple {
-  background: #9a6fff;
+.text-purple {
+  color: #9a6fff;
 }
-.bg-black {
-  background: #111;
+.text-black {
+  color: #111;
 }
-.bg-pink {
-  background: #fc6cb4;
+.text-pink {
+  color: #fc6cb4;
 }
-.bg-gray {
-  background: #d3d3d3;
+.text-gray {
+  color: #d3d3d3;
 }
-.bg-white {
-  background: #fff;
+.text-white {
+  color: #fff;
 }
-.bg-all {
-  background: #999;
+.text-all {
+  color: #999;
 }
 
-//?POR TIPOS
+
+
 
 .color-fire {
   background-color: #ff7402;

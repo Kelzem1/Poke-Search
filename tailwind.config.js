@@ -10,13 +10,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'card-black': '#474747',
+        'cardBlack': '#FF0000',
       },
       fontFamily: {
         'Mulish' : ['Mulish', 'sans-serif']
       },
       backgroundColor: {
-        'red': '#FF0000'
+        
       }
     },
   },
