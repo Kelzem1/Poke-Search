@@ -46,6 +46,40 @@ progress::-webkit-progress-bar {
   background: #999;
 }
 
+.bg-green {
+  background: #49d0b0;
+}
+.bg-red {
+  background: #fa6d6b;
+}
+.bg-blue {
+  background: #76befe;
+}
+.bg-yellow {
+  background: #ffd76f;
+}
+.bg-brown {
+  background: #544726c8;
+}
+.bg-purple {
+  background: #9a6fff;
+}
+.bg-black {
+  background: #111;
+}
+.bg-pink {
+  background: #fc6cb4;
+}
+.bg-gray {
+  background: #d3d3d3;
+}
+.bg-white {
+  background: #fff;
+}
+.bg-all {
+  background: #999;
+}
+
 //?POR TIPOS
 
 .color-fire {

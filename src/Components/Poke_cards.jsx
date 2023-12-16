@@ -6,12 +6,16 @@ const PokeCard = (
 
     const PesoReal = (weight / 10).toFixed(1)
     const AltuReal = (height / 10).toFixed(1)
-   
+    
+   const style = {
+    color: color
+    
+   }
    
     return(
        
         <div
-         className={`justify-center h-full bg-${color} rounded-xl shadow-md shadow-zinc-500 hover:-translate-y-3 transition-all ease-in-out duration-300`}>
+         className={`justify-center h-full bg-${color} rounded-xl shadow-md shadow-zinc-500 xl:hover:-translate-y-3 transition-all ease-in-out duration-300`}>
             <div className='p-3'>
                 
                     <div className="grid grid-cols-2 content-center mb-8">
@@ -20,25 +24,25 @@ const PokeCard = (
                                     <h1 className=" text-teal-900 font-bold capitalize text-4xl p-1 xl:text-4xl ">{name}</h1> 
                                        
                         </div>
-                                    <img className="hover:brightness-125 object-fill object-right flex m-auto justify-center transition-all w-64 h-64" src={img} alt={id}></img>
+                                    <img className="hover:brightness-125 object-fill object-right flex m-auto justify-center transition-all w-64 h-64 xl:ml-5" src={img} alt={id}></img>
                                             
                      </div>
 
-            <div className="text-slate-900 grid grid-rows-auto gap-8">
+            <div className="text-teal-900 grid grid-rows-auto gap-8">
 
                 <div className='grid-cols-max gap-2 object-cover align-middle flex text-center'>
 
                             <div className='flex-col w-1/4 '>
-                            <h2 className="text-teal-800 capitalize font-bold"> Type:<br />{tipo}</h2>
+                            <h2 style={style} className={`p-2 capitalize font-bold bg-black/60 rounded-lg`}> Type:<br />{tipo}</h2>
                             </div>
                             <div className='flex-col w-1/4 '>
-                                <h2 className="text-teal-800 capitalize font-bold">Ability:<br />{abilities}</h2>
+                                <h2 style={style} className={`p-2 capitalize font-bold bg-black/60 rounded-lg`}>Ability:<br />{abilities}</h2>
                             </div>
                             <div className='flex-col w-1/4 '>
-                                <h2 className="text-teal-800 capitalize font-bold">Height:<br /> {AltuReal} mtrs</h2>
+                                <h2 style={style} className={`p-2 capitalize font-bold bg-black/60 rounded-lg`}>Height:<br /> {AltuReal} mtrs</h2>
                             </div>
                             <div className='flex-col w-1/4 '>
-                                <h2 className="text-teal-800 capitalize font-bold">Weight:<br /> {PesoReal} Kgs</h2>
+                                <h2 style={style} className={`p-2 capitalize font-bold bg-black/60 rounded-lg`}>Weight:<br /> {PesoReal} Kgs</h2>
                             </div>
                 </div>
 
