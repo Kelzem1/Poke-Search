@@ -13,7 +13,8 @@ export default {
         'cardBlack': '#FF0000',
       },
       fontFamily: {
-        'Mulish' : ['Mulish', 'sans-serif']
+        'Mulish' : ['Mulish', 'sans-serif'],
+        'Poppins': ['Poppins', 'sans-serif']
       },
       backgroundColor: {
         
