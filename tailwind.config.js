@@ -11,6 +11,7 @@ export default {
     extend: {
       colors: {
         'cardBlack': '#FF0000',
+        'ballColor' : '#c93f3d'
       },
       fontFamily: {
         'Mulish' : ['Mulish', 'sans-serif'],

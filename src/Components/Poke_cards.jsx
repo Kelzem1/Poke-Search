@@ -19,14 +19,14 @@ const PokeCard = (
         <div
         
          className={` bg-${color} rounded-xl flex-col shadow-md shadow-zinc-500 xl:hover:scale-105 transition-all ease-in-out duration-300`}>
-            <div className='p-5'>
+            <div className='p-3'>
                 
                     <div className="">
                                      
                         <div className="relative">
 
-                                <div className='static'>
-                                    <h1 className="text-neutral-950/30 font-Poppins font-extrabold text-9xl mt-2 xl:text-9xl text-center">#{idNumber}</h1>  
+                                <div className='static w-full h-full'>
+                                    <h1 className="text-neutral-950/20 w-full h-full font-Poppins font-extrabold text-9xl mt-2 xl:text-9xl text-center">#{idNumber}</h1>  
                                 </div>
 
                                 <div className='flex justify-center align-top w-72 h-52 m-auto'>
@@ -34,7 +34,7 @@ const PokeCard = (
                                 </div>
 
                                 <div className='flex justify-center align-middle'>
-                                   <h1 className="text-neutral-950 font-extrabold text-center capitalize text-6xl xl:text-4xl">{name}</h1> 
+                                   <h1 className="text-neutral-950/80 font-extrabold text-center capitalize text-6xl xl:text-6xl">{name}</h1> 
                                 </div>
                                  
                                                                            

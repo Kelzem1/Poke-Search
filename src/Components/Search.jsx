@@ -3,8 +3,8 @@ const Search = () =>{
 
     const placeHolder = 'name, id, type.'
     return(
-        <div className="flex justify-center align-middle bg-black p-2">
-            <input className="bg-indigo-700/20 bg-opacity-30 border-2 border-yellow-500 w-5/6 p-4 h-12 rounded-md text-yellow-400 capitalize" placeholder={placeHolder}></input>
+        <div className="flex justify-center h-full align-middle p-2">
+            <input className={`bg-white-700/20 bg-opacity-30 border-4 rounded-3xl  border-t-ballColor border-r-ballColor border-b-stone-200 border-l-stone-200 w-2/6 p-4 h-14 text-black-900 capitalize focus:border-ballColor focus:w-5/6 transition-all focus:decoration-transparent shadow-md shadow-neutral-400 focus:outline-none`} placeholder={placeHolder}></input>
         </div>
     )
 }

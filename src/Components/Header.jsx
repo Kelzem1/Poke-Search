@@ -1,7 +1,16 @@
+import Search from "./Search"
+
 const Header = () =>{
     return(
-        <div className="bg-black text-yellow-500 p-5 w-full h-44 flex justify-center align-middle">
-        <h1 className="font-bold text-center text-5xl">POKEDEX</h1>
+        <div className="bg-gradient-to-b from-black to-neutral-950 text-ballColor w-full h-screen flex-col justify-center align-middle">
+        <div className="h-1/2 grid place-content-center">
+            <h1 className="font-bold text-center text-7xl">Pokeapp</h1>
+        </div>
+            
+        <div>
+           <Search /> 
+        </div>
+        
         </div>
     )
 }
