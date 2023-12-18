@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import PokeCard from "../Components/Poke_cards";
 import { URL_LIST_POKEMONS } from "../urlApis/apisUrls";
+import { URL_FULL } from "../urlApis/apisUrls";
+import Search from "../Components/Search";
 
 
 
@@ -14,6 +16,8 @@ const PokeApi = () =>{
     //console.log(pokeColor)
 
     useEffect(() =>{
+
+
         const getPokemon = async () =>{
              const response = await fetch(`${URL_LIST_POKEMONS}`)
              const listaPoke = await response.json()
@@ -57,6 +61,8 @@ const PokeApi = () =>{
                 
  
              })
+
+             
              
  
              setPokeName(await (Promise.all(newPokemones)))
@@ -73,6 +79,7 @@ const PokeApi = () =>{
     
     return(
         <div className="bg-neutral-950">
+        <Search onSearch={searchPokemon} />
             <div className='grid font-Mulish p-5 grid-cols-1 gap-8 xl:grid-cols-4 xl:m-auto'>
                 {
                     pokeName.map(pokemon =>{

@@ -18,7 +18,7 @@ const PokeCard = (
        
         <div
         
-         className={` bg-${color} rounded-xl flex-col shadow-md shadow-zinc-500 xl:hover:scale-105 transition-all ease-in-out duration-300`}>
+         className={` bg-${color} rounded-xl flex-col mt-20 shadow-md shadow-zinc-500 xl:hover:scale-105 transition-all ease-in-out duration-300`}>
             <div className='p-3'>
                 
                     <div className="">
