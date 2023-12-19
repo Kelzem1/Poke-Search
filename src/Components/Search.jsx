@@ -11,6 +11,7 @@ const Search = ({onSearch}) =>{
     const handleSearch = () =>{
         onSearch(searchTerm)
     }
+    console.log(searchTerm)
 
     const placeHolder = 'name, id, type.'
     return(

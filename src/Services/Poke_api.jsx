@@ -13,6 +13,8 @@ const PokeApi = () =>{
     
     const [pokeName, setPokeName] = useState([])
     const [pokeColor, setPokeColor] = useState([])
+    const [pokeS, setPokeS] = useState('')
+    console.log(pokeS)
     //console.log(pokeColor)
 
     useEffect(() =>{
@@ -23,9 +25,12 @@ const PokeApi = () =>{
              const listaPoke = await response.json()
              const { results } = listaPoke
  
- 
-             const newPokemones = results.map( async (pepe) => {
-                 const response = await fetch(pepe.url)
+            
+
+
+
+             const newPokemones = results.map( async (pokemon) => {
+                 const response = await fetch(pokemon.url)
                  const poke = await response.json()
                  console.log(poke)
                 //Datos con completos aqui abajo.
@@ -58,9 +63,14 @@ const PokeApi = () =>{
 
                      
                  }
+
+                
                 
  
              })
+              
+
+
 
              
              
@@ -79,7 +89,7 @@ const PokeApi = () =>{
     
     return(
         <div className="bg-neutral-950">
-        <Search onSearch={searchPokemon} />
+        
             <div className='grid font-Mulish p-5 grid-cols-1 gap-8 xl:grid-cols-4 xl:m-auto'>
                 {
                     pokeName.map(pokemon =>{
