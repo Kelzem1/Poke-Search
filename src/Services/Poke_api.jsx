@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import PokeCard from "../Components/Poke_cards";
 import { URL_LIST_POKEMONS } from "../urlApis/apisUrls";
+import { URL_POKEMON } from "../urlApis/apisUrls";
 import { URL_FULL } from "../urlApis/apisUrls";
 import Search from "../Components/Search";
 
