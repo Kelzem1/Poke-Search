@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import {URL_LIST_POKEMONS}  from "../urlApis/apisUrls"
 import { URL_SPECIES } from "../urlApis/apisUrls"
 
-
+// All Api moves here. Happy 2024
 
 const SearchPoke = ( { card }) =>{
 
