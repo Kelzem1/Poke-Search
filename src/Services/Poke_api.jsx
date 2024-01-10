@@ -88,39 +88,39 @@ import Search from "../Components/Search";
 
 
     
-    return(
-        <div className="bg-neutral-950">
+//     return(
+//         <div className="bg-neutral-950">
         
-            <div className='grid font-Mulish p-5 grid-cols-1 gap-8 xl:grid-cols-4 xl:m-auto'>
-                {
-                    pokeName.map(pokemon =>{
-                        return(
-                            // eslint-disable-next-line react/jsx-key
-                            <PokeCard 
-                            key={pokemon.id}
-                            id={pokemon.id} 
-                            name={pokemon.name} 
-                            img={pokemon.img} 
-                            tipo={pokemon.tipo} 
-                            height={pokemon.height} 
-                            weight={pokemon.weight} 
-                            abilities={pokemon.abilities}
-                            color={pokemon.species.color}
-                            hp={pokemon.hp}
-                            attack={pokemon.attack}
-                            defense={pokemon.defense}
-                            specialAttack={pokemon.specialAttack}
-                            specialDefense={pokemon.specialDefense}
-                            speed={pokemon.speed}
+//             <div className='grid font-Mulish p-5 grid-cols-1 gap-8 xl:grid-cols-4 xl:m-auto'>
+//                 {
+//                     pokeName.map(pokemon =>{
+//                         return(
+//                             // eslint-disable-next-line react/jsx-key
+//                             <PokeCard 
+//                             key={pokemon.id}
+//                             id={pokemon.id} 
+//                             name={pokemon.name} 
+//                             img={pokemon.img} 
+//                             tipo={pokemon.tipo} 
+//                             height={pokemon.height} 
+//                             weight={pokemon.weight} 
+//                             abilities={pokemon.abilities}
+//                             color={pokemon.species.color}
+//                             hp={pokemon.hp}
+//                             attack={pokemon.attack}
+//                             defense={pokemon.defense}
+//                             specialAttack={pokemon.specialAttack}
+//                             specialDefense={pokemon.specialDefense}
+//                             speed={pokemon.speed}
                             
-                            />
-                        )
-                    })
-                }
-            </div>
-        </div>
+//                             />
+//                         )
+//                     })
+//                 }
+//             </div>
+//         </div>
         
-    )
-}
+//     )
+// //}
 
-export default PokeApi
+// export default PokeApi

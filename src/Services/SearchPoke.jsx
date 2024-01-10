@@ -5,7 +5,7 @@ import { URL_SPECIES } from "../urlApis/apisUrls"
 
 // All Api moves here. Happy 2024
 
-const SearchPoke = ( { card }) =>{
+const SearchPoke = () =>{
 
     const [search, setSearch] = useState([])
     console.log(search)
