@@ -18,7 +18,7 @@ const PokeCard = (
        
         <div
         
-         className={` bg-${color} rounded-xl flex-col mt-20 shadow-md shadow-zinc-500 xl:hover:scale-105 transition-all ease-in-out duration-300`}>
+         className={` bg-${color} rounded-xl flex-col shadow-md shadow-zinc-500 xl:hover:scale-105 transition-all ease-in-out duration-300`}>
             <div className='p-3'>
                 
                     <div className="">
@@ -26,7 +26,7 @@ const PokeCard = (
                         <div className="relative">
 
                                 <div className='static w-full h-full'>
-                                    <h1 className="text-neutral-950/20 w-full h-full font-Poppins font-extrabold text-9xl mt-2 xl:text-9xl text-center">#{idNumber}</h1>  
+                                    <h1 className="text-neutral-950/20 w-full h-full font-Poppins font-extrabold text-9xl xl:text-9xl text-center">#{idNumber}</h1>  
                                 </div>
 
                                 <div className='flex justify-center align-top w-72 h-52 m-auto'>
@@ -42,7 +42,7 @@ const PokeCard = (
                              
                      </div>
 
-            <div className="text- grid grid-rows-auto gap-8 mt-8">
+            <div className="text- grid grid-rows-auto gap-5 mt-8">
 
                 <div className='grid-cols-max gap-2 object-cover align-middle flex text-center'>
 
