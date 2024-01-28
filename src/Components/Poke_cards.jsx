@@ -18,8 +18,8 @@ const PokeCard = (
        
         <div
         
-         className={` bg-${color} rounded-xl flex-col shadow-md shadow-zinc-500 xl:hover:scale-105 transition-all ease-in-out duration-300`}>
-            <div className='p-3'>
+         className={` bg-${color} rounded-lg flex-col h-full shadow-md shadow-zinc-500 xl:hover:scale-105 transition-all ease-in-out duration-300`}>
+            <div className='p-5'>
                 
                     <div className="">
                                      
@@ -29,7 +29,7 @@ const PokeCard = (
                                     <h1 className="text-neutral-950/20 w-full h-full font-Poppins font-extrabold text-9xl xl:text-9xl text-center">#{idNumber}</h1>  
                                 </div>
 
-                                <div className='flex justify-center align-top w-72 h-52 m-auto'>
+                                <div className='flex justify-center align-top w-72 h-44 m-auto'>
                                     <img className="hover:brightness-125 transition-all w-72 h-72 absolute top-14" src={img} alt={id}></img>
                                 </div>
 
@@ -42,9 +42,9 @@ const PokeCard = (
                              
                      </div>
 
-            <div className="text- grid grid-rows-auto gap-5 mt-8">
+            <div className="text- grid grid-rows-auto gap-3 mt-4">
 
-                <div className='grid-cols-max gap-2 object-cover align-middle flex text-center'>
+                <div className='grid-cols-max gap-1 object-cover align-middle flex text-center'>
 
                             <div className='flex-col w-1/4 '>
                             <h2  className={statsStyle}> Type:<br />{tipo}</h2>
@@ -60,7 +60,7 @@ const PokeCard = (
                             </div>
                 </div>
 
-                <div className='flex-col font-bold text-lg w-full h-full'>
+                <div className='flex-col font-bold text-xl m-auto w-full h-full'>
                     <h3>Hp: <progress value={hp} max={110} /></h3>
                     <h3>Attack:<progress value={attack} max={110} /></h3>
                     <h3>Defense: <progress value={defense} max={110} /></h3>
