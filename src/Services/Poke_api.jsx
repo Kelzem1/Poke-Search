@@ -14,9 +14,6 @@ const PokeApi = () =>{
     
     const [pokeName, setPokeName] = useState([])
     const [pokeColor, setPokeColor] = useState('')
-    const [pokeS, setPokeS] = useState('')
-    console.log(pokeS)
-    //console.log(pokeColor)
 
     useEffect(() =>{
 
@@ -33,8 +30,7 @@ const PokeApi = () =>{
              const newPokemones = results.map( async (pokemon) => {
                  const response = await fetch(pokemon.url)
                  const poke = await response.json()
-                 console.log(poke)
-                //Datos con completos aqui abajo.
+                //Datos completos aqui abajo.
                  const speciesRes = await fetch(poke.species.url)
                  const speciesData = await speciesRes.json()
                 
@@ -59,23 +55,10 @@ const PokeApi = () =>{
                      defense: poke.stats[2].base_stat,
                      specialAttack: poke.stats[3].base_stat,
                      specialDefense: poke.stats[4].base_stat,
-                     speed: poke.stats[5].base_stat
-                        
-
-                     
+                     speed: poke.stats[5].base_stat 
                  }
 
-                
-                
- 
              })
-              
-
-
-
-             
-             
- 
              setPokeName(await (Promise.all(newPokemones)))
 
             
@@ -83,15 +66,9 @@ const PokeApi = () =>{
         getPokemon()
      }, [])
 
-  
-
-
-
-    
     return(
-        <div className="bg-neutral-950">
-        
-            <div className='grid font-Mulish p-5 grid-cols-1 gap-8 xl:grid-cols-4 xl:m-auto'>
+  
+            <div className='bg-black grid font-Mulish p-5 grid-cols-1 gap-8 xl:grid-cols-4 xl:m-auto'>
                 {
                     pokeName.map(pokemon =>{
                         return(
@@ -118,7 +95,7 @@ const PokeApi = () =>{
                     })
                 }
             </div>
-        </div>
+        
         
     )
 }
