@@ -68,7 +68,7 @@ const PokeApi = () =>{
 
     return(
   
-            <div className='bg-black grid font-Mulish p-5 grid-cols-1 gap-8 xl:grid-cols-4 xl:m-auto'>
+            <div className='bg-black grid font-Mulish p-3 grid-cols-1 gap-5 xl:grid-cols-4 xl:m-auto'>
                 {
                     pokeName.map(pokemon =>{
                         return(
