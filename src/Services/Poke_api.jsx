@@ -13,7 +13,7 @@ const PokeApi = () =>{
 
     
     const [pokeName, setPokeName] = useState([])
-    const [pokeColor, setPokeColor] = useState('')
+    
 
     useEffect(() =>{
 
@@ -29,12 +29,7 @@ const PokeApi = () =>{
                 //Datos completos aqui abajo.
                  const speciesRes = await fetch(poke.species.url)
                  const speciesData = await speciesRes.json()
-                
-                 setPokeColor(speciesData.color.name)
-                
-                 
- 
- 
+    
                  return {
                      id: poke.id,
                      name: poke.name,

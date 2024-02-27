@@ -9,22 +9,21 @@ const PokeCard = (
 
     const statsStyle = `text-${color} p-2 capitalize font-bold bg-black/70 rounded-lg`
 
-    const idNumber = id.toString().padStart(3, '0')
     
     
  
    
     return(
        
-        <div className={` bg-${color} rounded-xl flex-col h-1/2 m-5 shadow-md shadow-zinc-500 xl:hover:shadow-zinc-100 transition-all ease-in-out duration-300`}>
+        <div className={`bg-${color} rounded-xl flex-col h-1/2 m-5`}>
             <div className=''>
                 
                     <div className="">
                                      
                         <div className="relative">
 
-                                <div className='static w-full h-full'>
-                                    <h1 className="text-neutral-950/10 p-2 font-Poppins font-extrabold text-9xl xl:text-9xl text-center">#{idNumber}</h1>  
+                                <div className='w-full h-full'>
+                                    <h1 className="text-neutral-950/10 p-3 font-Poppins font-extrabold text-9xl xl:text-9xl text-center">#{id}</h1>  
                                 </div>
 
                                 <div className='flex justify-center align-top w-72 h-44 m-auto'>
@@ -71,7 +70,8 @@ const PokeCard = (
             </div>
 
         </div>
-    </div>
+    
+       </div>
     )
 }
 
