@@ -9,10 +9,10 @@ function App() {
   
   return (
     <>
-    <div className='bg-neutral-800'>
     <Header />
+    <div className='bg-neutral-800 xl:grid xl:grid-cols-3 md:grid md:grid-cols-2'>
+    
     <PokeApi />
-    <Card_container />
     </div>
     
     </>

@@ -15,7 +15,7 @@ const PokeCard = (
    
     return(
        
-        <div className={`bg-${color} rounded-xl flex-col h-1/2 m-5`}>
+        <div className={`bg-${color} rounded-xl flex-col m-5`}>
             <div className=''>
                 
                     <div className="">
