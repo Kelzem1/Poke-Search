@@ -60,7 +60,7 @@ const PokeApi = () =>{
     return(
   
             <> 
-                 {pokeName.map(pokemon =><PokeCard {...pokemon} color={pokemon.species.color} />)}
+                 {pokeName.map(pokemon =><PokeCard key={pokemon.id} {...pokemon} color={pokemon.species.color} />)}
             </>
                 
             

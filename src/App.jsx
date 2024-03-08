@@ -7,13 +7,13 @@ import PokeCard from './Components/Poke_cards'
 function App() {
   
   return (
-    <>
+    <main className='bg-stone-200'>
     <Header />
-    <div className='bg-stone-100 grid-rows-3 xl:grid xl:grid-cols-3 xl:grid-rows-3 md:grid md:grid-cols-2'>
+    <div className='grid-rows-2 xl:grid xl:grid-cols-4 md:grid md:grid-cols-2'>
     <PokeApi />
     </div>
     
-    </>
+    </main>
   )
 }
 
