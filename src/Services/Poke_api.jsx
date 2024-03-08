@@ -4,7 +4,7 @@ import PokeCard from "../Components/Poke_cards";
 import { URL_LIST_POKEMONS } from "../urlApis/apisUrls";
 import { URL_POKEMON } from "../urlApis/apisUrls";
 import { URL_FULL } from "../urlApis/apisUrls";
-import Search from "../Components/Search";
+
 
 
 
@@ -29,11 +29,11 @@ const PokeApi = () =>{
                 //Datos completos aqui abajo.
                  const speciesRes = await fetch(poke.species.url)
                  const speciesData = await speciesRes.json()
-    
+                console.log(poke)
                  return {
                      id: poke.id,
                      name: poke.name,
-                     img: poke.sprites.other["official-artwork"].front_default,
+                     img: poke.sprites.versions["generation-v"]["black-white"].animated.front_default,
                      tipo: poke.types[0].type.name,
                      height: poke.height,
                      weight: poke.weight,
@@ -59,31 +59,8 @@ const PokeApi = () =>{
 
     return(
   
-            <>
-                {
-                    pokeName.map(pokemon =>{
-                        return(
-                            <PokeCard 
-                            key={pokemon.id}
-                            id={pokemon.id} 
-                            name={pokemon.name} 
-                            img={pokemon.img} 
-                            tipo={pokemon.tipo} 
-                            height={pokemon.height} 
-                            weight={pokemon.weight} 
-                            abilities={pokemon.abilities}
-                            color={pokemon.species.color}
-                            hp={pokemon.hp}
-                            attack={pokemon.attack}
-                            defense={pokemon.defense}
-                            specialAttack={pokemon.specialAttack}
-                            specialDefense={pokemon.specialDefense}
-                            speed={pokemon.speed}
-                            
-                            />
-                        )
-                    })
-                }
+            <> 
+                 {pokeName.map(pokemon =><PokeCard {...pokemon} color={pokemon.species.color} />)}
             </>
                 
             

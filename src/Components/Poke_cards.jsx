@@ -15,23 +15,23 @@ const PokeCard = (
    
     return(
        
-        <div className={`bg-${color} rounded-xl flex-col m-5`}>
-            <div className=''>
+        <div className={`bg-${color} rounded-md flex-col m-3 shadow-[inset_80px_8px_800px_#46464620]`}>
+            <div className='w-full m-auto]'>
                 
                     <div className="">
                                      
                         <div className="relative">
 
-                                <div className='w-full h-full'>
-                                    <h1 className="text-neutral-950/10 p-3 font-Poppins font-extrabold text-9xl xl:text-9xl text-center">#{id}</h1>  
+                                <div className=''>
+                                    <h1 className="text-neutral-950/10 p-2 font-Poppins font-extrabold text-7xl xl:text-9xl text-center">#{id}</h1>  
                                 </div>
 
                                 <div className='flex justify-center align-top w-72 h-44 m-auto'>
-                                    <img className="hover:brightness-125 transition-all w-72 h-72 absolute top-14" src={img} alt={id}></img>
+                                    <img className="hover:brightness-125 transition-all w-44 h-44 absolute top-20" src={img} alt={id}></img>
                                 </div>
 
                                 <div className='flex justify-center align-middle'>
-                                   <h1 className="text-neutral-950/80 font-extrabold text-center capitalize text-6xl xl:text-6xl">{name}</h1> 
+                                   <h1 className="text-neutral-950/80 font-extrabold text-center capitalize text-4xl xl:text-5xl">{name}</h1> 
                                 </div>
                                  
                                                                            
@@ -39,25 +39,25 @@ const PokeCard = (
                              
                      </div>
 
-            <div className="text- grid grid-rows-auto gap-3 mt-4 p-2">
+            <div className="grid grid-rows gap-3 p-2">
 
-                <div className='grid-cols-max gap-1 object-cover align-middle flex text-center'>
+                <div className='text-md w-4/5 font-bold gap-3 m-auto object-cover align-middle flex justify-center text-center'>
 
-                            <div className='flex-col w-1/4 '>
+                            <div className='flex-col'>
                             <h2  className={statsStyle}> Type:<br />{tipo}</h2>
                             </div>
-                            <div className='flex-col w-1/4 '>
+                            <div className='flex-col'>
                                 <h2 className={statsStyle}>Ability:<br />{abilities}</h2>
                             </div>
-                            <div className='flex-col w-1/4 '>
+                            <div className='flex-col '>
                                 <h2  className={statsStyle}>Height:<br /> {AltuReal} mtrs</h2>
                             </div>
-                            <div className='flex-col w-1/4 '>
+                            <div className='flex-col '>
                                 <h2 className={statsStyle}>Weight:<br /> {PesoReal} Kgs</h2>
                             </div>
                 </div>
 
-                <div className='flex-col font-bold text-xl m-auto w-full h-full'>
+                <div className='flex-col font-bold text-md w-full h-full flex justify-center m-auto'>
                     <h3>Hp: <progress value={hp} max={110} /></h3>
                     <h3>Attack:<progress value={attack} max={110} /></h3>
                     <h3>Defense: <progress value={defense} max={110} /></h3>

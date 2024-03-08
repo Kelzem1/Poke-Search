@@ -2,18 +2,6 @@ import { useState } from "react"
 
 const Search = ({onSearch}) =>{
 
-    const [searchTerm, setSearchTerm] = useState('')
-
-    const handleInputChange = (event) =>{
-        setSearchTerm(event.target.value)
-    }
-
-    const handleSearch = () =>{
-        onSearch(searchTerm)
-    }
-    console.log(searchTerm)
-
-    const placeHolder = 'name, id, type.'
     return(
         <div className="flex justify-center h-24 align-middle mt-12">
             <input
