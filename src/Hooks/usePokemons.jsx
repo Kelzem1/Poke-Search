@@ -40,14 +40,25 @@ function usePokemons() {
                 })
              )
                 
-             setPokeName(newPokemones)
+             return {next, newPokemones}
         }
+    const obtenerPokemones = async () =>{
+        const {next, newPokemones} = await getPokemon()
+        setPokeName(newPokemones)
+        setNextUrl(next)
+    }
+
+    const masPokemons = async () =>{
+        const {next, newPokemones} = await getPokemon(nextUrl)
+        setPokeName(prev => [...prev, ...newPokemones])
+        setNextUrl(next)
+    }
 
 
     useEffect(() =>{
         
-        getPokemon()
+        obtenerPokemones()
      }, [])
-     return{pokeName}
+     return{pokeName, masPokemons}
 }
 export default usePokemons
