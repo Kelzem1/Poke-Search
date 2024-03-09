@@ -15,22 +15,22 @@ const PokeCard = (
    
     return(
        
-        <div className={`bg-${color} rounded-md flex-col m-3 hover:shadow-lg shadow-neutral-700 transition-all`}>
+        <div className={`bg-${color} rounded-md flex-col m-3 p-3 border-2 border-stone-950 hover:shadow-lg shadow-neutral-700 transition-all`}>
             <div className='w-full m-auto]'>
                 
                     <div className="">
                                      
                         <div className="relative">
 
-                                <div className=''>
-                                    <h1 className="text-neutral-950/10 hover:text-neutral-950/40 transition-all p-2 font-Poppins font-extrabold text-9xl xl:text-9xl text-center">#{id}</h1>  
+                                <div className='h-full'>
+                                    <h1 className="text-neutral-950/10 hover:text-neutral-950/60 transition-all  font-Poppins font-extrabold text-9xl text-center absolute h-full w-full bottom-20">#{id}</h1>  
                                 </div>
 
-                                <div className='flex justify-center align-top w-72 h-36 m-auto'>
-                                    <img className="hover:brightness-125 transition-all w-44 h-44 absolute top-24 xl:top-34" src={img} alt={id}></img>
+                                <div className='flex justify-center w-72 h-44 m-auto mt-20'>
+                                    <img className="hover:brightness-125 transition-all content-center w-44 h-40" src={img} alt={id}></img>
                                 </div>
 
-                                <div className='flex justify-center align-middle m-2'>
+                                <div className='flex justify-center align-middle'>
                                    <h1 className="text-neutral-950/80 font-extrabold text-center capitalize text-4xl xl:text-5xl">{name}</h1> 
                                 </div>
                                  
