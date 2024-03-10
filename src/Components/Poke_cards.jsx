@@ -15,7 +15,7 @@ const PokeCard = (
    
     return(
        
-        <div className={`bg-${color} rounded-md flex-col m-3 p-3 border-2 border-stone-950 hover:shadow-lg shadow-neutral-700 transition-all`}>
+        <div className={`bg-${color} rounded-md shadow-md shadow-black flex-col m-3 p-3 border-2 border-stone-950 hover:shadow-lg hover:shadow-black transition-all duration-150 `}>
             <div className='w-full m-auto]'>
                 
                     <div className="">
@@ -23,14 +23,14 @@ const PokeCard = (
                         <div className="relative">
 
                                 <div className='h-full'>
-                                    <h1 className="text-neutral-950/10 transition-all  font-Poppins font-extrabold text-9xl text-center absolute h-full w-full bottom-20">#{id}</h1>  
+                                    <h1 className="text-neutral-950/10 transition-all font-Poppins font-extrabold text-9xl text-center absolute h-full w-full bottom-20">#{id}</h1>  
                                 </div>
 
                                 <div className='flex justify-center w-72 h-44 m-auto mt-20'>
                                     <img className="hover:drop-shadow-2xl  transition-all content-center w-44 h-40" src={img} alt={id}></img>
                                 </div>
 
-                                <div className='flex justify-center align-middle'>
+                                <div className='flex justify-center align-middle m-2'>
                                    <h1 className="text-neutral-950/80 font-extrabold text-center capitalize text-3xl md:text-3xl xl:text-4xl">{name}</h1> 
                                 </div>
                                  
@@ -39,9 +39,9 @@ const PokeCard = (
                              
                      </div>
 
-            <div className="grid grid-row gap-3 p-2">
+            <div className="grid grid-row gap-3 p-1">
 
-                <div className='text-sm w-full font-bold gap-2 grid grid-cols-4 m-auto object-cover align-middle justify-center text-center'>
+                <div className='text-sm w-full font-bold gap-1 grid grid-cols-4 m-auto object-cover align-middle justify-center text-center'>
 
                             <div className=''>
                             <h2  className={statsStyle}> Type:<br />{tipo}</h2>
