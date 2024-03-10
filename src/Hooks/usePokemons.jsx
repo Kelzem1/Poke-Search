@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 
-const URL_DEFAULT = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=0'
+const URL_DEFAULT = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=1020'
 
 function usePokemons() {
     const [pokeName, setPokeName] = useState([])
     const [nextUrl, setNextUrl] =useState('')
+    const [verMas, setVerMas] = useState(true)
     const getPokemon = async (url = URL_DEFAULT) =>{
              const response = await fetch(url)
              const listaPoke = await response.json()
@@ -17,11 +18,12 @@ function usePokemons() {
                 //Datos completos aqui abajo.
                  const speciesRes = await fetch(poke.species.url)
                  const speciesData = await speciesRes.json()
+                 console.log(poke)
                 
                  return {
                      id: poke.id,
                      name: poke.name,
-                     img: poke.sprites.versions["generation-v"]["black-white"].animated.front_default,
+                     img: poke.sprites.versions["generation-v"]["black-white"].animated.front_default || poke.sprites.front_default,
                      tipo: poke.types[0].type.name,
                      height: poke.height,
                      weight: poke.weight,
@@ -51,6 +53,7 @@ function usePokemons() {
     const masPokemons = async () =>{
         const {next, newPokemones} = await getPokemon(nextUrl)
         setPokeName(prev => [...prev, ...newPokemones])
+        next == null && setVerMas(false)
         setNextUrl(next)
     }
 
@@ -59,6 +62,6 @@ function usePokemons() {
         
         obtenerPokemones()
      }, [])
-     return{pokeName, masPokemons}
+     return{pokeName, masPokemons, verMas}
 }
 export default usePokemons

@@ -23,7 +23,7 @@ const PokeCard = (
                         <div className="relative">
 
                                 <div className='h-full'>
-                                    <h1 className="text-neutral-950/10 transition-all font-Poppins font-extrabold text-9xl text-center absolute h-full w-full bottom-20">#{id}</h1>  
+                                    <h1 className="text-neutral-950/10 transition-all font-Poppins font-extrabold text-7xl text-center absolute h-full w-full bottom-20">#{id}</h1>  
                                 </div>
 
                                 <div className='flex justify-center w-72 h-44 m-auto mt-20'>
