@@ -8,22 +8,22 @@ const PokeCard = (
     const AltuReal = (height / 10).toFixed(1)
 
     const statsStyle = `text-${color} capitalize p-2 bg-black/70 rounded-md`
-
+    
     
     
  
    
     return(
        
-        <div className={`bg-${color} rounded-md shadow-md shadow-black flex-col m-3 p-3 border-2 border-stone-950 hover:shadow-lg hover:shadow-black transition-all duration-150 `}>
-            <div className='w-full m-auto]'>
+        <div className={`bg-${color} rounded-md shadow-md shadow-black flex-col m-6 p-2  border-2 border-stone-950 hover:shadow-lg hover:shadow-black transition-all duration-150 `}>
+            <div className='w-full m-auto'>
                 
                     <div className="">
                                      
                         <div className="relative">
 
                                 <div className='h-full'>
-                                    <h1 className="text-neutral-950/10 transition-all font-Poppins font-extrabold text-7xl text-center absolute h-full w-full bottom-20">#{id}</h1>  
+                                    <h1 className="text-neutral-950/10 transition-all font-Poppins font-extrabold xl:text-8xl text-7xl text-center absolute h-full w-full bottom-20">#{id}</h1>  
                                 </div>
 
                                 <div className='flex justify-center w-72 h-44 m-auto mt-20'>
@@ -58,12 +58,12 @@ const PokeCard = (
                 </div>
 
                 <div className='flex-col font-bold text-md w-full h-full flex justify-center m-auto'>
-                    <h3>Hp: <progress value={hp} max={110} /></h3>
-                    <h3>Attack:<progress value={attack} max={110} /></h3>
-                    <h3>Defense: <progress value={defense} max={110} /></h3>
-                    <h3>Special Attack: <progress value={specialAttack} max={110} /></h3>
-                    <h3>Special Defense:<progress value={specialDefense} max={110} /></h3>
-                    <h3>Speed: <progress value={speed} max={110} /></h3>
+                    <h3>Hp: {hp} <progress value={hp} max={110} /></h3>
+                    <h3>Attack: {attack}<progress value={attack} max={110} /></h3>
+                    <h3>Defense: {defense}<progress value={defense} max={110} /></h3>
+                    <h3>Special Attack: {specialAttack}<progress value={specialAttack} max={110} /></h3>
+                    <h3>Special Defense: {specialDefense}<progress value={specialDefense} max={110} /></h3>
+                    <h3>Speed: {speed}<progress value={speed} max={110} /></h3>
                 </div>
                 
                 
