@@ -7,20 +7,26 @@ import { useState } from "react";
 
 const ShowPokes = () =>{
 
-    const {pokeName, masPokemons, verMas, searchPokemon, filterPokemon} = usePokemons([])
+    const {pokeName, masPokemons, verMas, searchPokemon,} = usePokemons([])
     const [buscar, setBusq] = useState('')
+    const [pokeEncontrado, setPokeEncontrado] = useState(null)
     const buscarPoke = async (e) =>{
         e.preventDefault() 
         if (!buscar) return
 
         const pokeS = await searchPokemon(buscar)
-        console.log(pokeS)
+        if (pokeS) {
+            setPokeEncontrado(pokeS)
+        }else {
+            setPokeEncontrado(null)
+        }
     }
 
     return(
             <>
             <Search buscar={buscar} setBusq={setBusq} buscarPoke={buscarPoke}/>
-            <InfiniteScroll
+            {pokeEncontrado ? (<PokeCard {...pokeEncontrado}/>) :(
+                <InfiniteScroll
             className="xl:m-16 md:m-12 m-6 grid-rows-2 lg:grid-cols-3 xl:grid xl:grid-cols-4 md:grid md:grid-cols-2"
             dataLength={pokeName.length}
             next={masPokemons}
@@ -30,11 +36,13 @@ const ShowPokes = () =>{
             > 
                  {pokeName.map(pokemon =><PokeCard key={pokemon.name} {...pokemon} />)}
             </InfiniteScroll> 
-            </>
+            )
+            
+           
             
                 
-            
-        
+            }
+         </>
         
     )
 }
