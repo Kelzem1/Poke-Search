@@ -4,6 +4,7 @@ import usePokemons from "../Hooks/usePokemons";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Search from "../Components/Search";
 import { useState } from "react";
+import FindedPoke from "../Components/FindedPoke";
 
 const ShowPokes = () =>{
 
@@ -20,14 +21,16 @@ const ShowPokes = () =>{
         }else {
             setPokeEncontrado(null)
         }
+        console.log(pokeS)
     }
+  
 
     return(
-            <>
+            <section className="h-screen">
             <Search buscar={buscar} setBusq={setBusq} buscarPoke={buscarPoke}/>
             {pokeEncontrado ? (<PokeCard {...pokeEncontrado}/>) :(
                 <InfiniteScroll
-            className="xl:m-16 md:m-12 m-6 grid-rows-2 lg:grid-cols-3 xl:grid xl:grid-cols-4 md:grid md:grid-cols-2"
+            className="xl:m-20 md:m-12  m-6 grid-rows-2 lg:grid-cols-3 xl:grid xl:grid-cols-4 md:grid md:grid-cols-2"
             dataLength={pokeName.length}
             next={masPokemons}
             hasMore={verMas}
@@ -42,7 +45,7 @@ const ShowPokes = () =>{
             
                 
             }
-         </>
+         </section>
         
     )
 }

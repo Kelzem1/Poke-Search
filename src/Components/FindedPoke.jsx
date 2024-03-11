@@ -1,18 +1,10 @@
-import '../App.css'
-
-const PokeCard = (
-    {id, img, name, tipo, height, weight, abilities, color, hp, attack, defense, specialAttack, specialDefense, speed}
-    ) => {
-    
+const FindedPoke = (id, img, name, tipo, height, weight, abilities, color, hp, attack, defense, specialAttack, specialDefense, speed) =>{
     const PesoReal = (weight / 10).toFixed(1)
     const AltuReal = (height / 10).toFixed(1)
 
     const statsStyle = `text-${color} capitalize p-2 bg-black/70 rounded-md`
- 
-   
     return(
-       
-        <div className={`bg-${color} rounded-md shadow-md shadow-black flex-col m-6 p-5  border-2 border-stone-950 hover:shadow-lg hover:shadow-black transition-all duration-150 `}>
+        <div className={`bg-${color} rounded-md shadow-md shadow-black flex-col m-6 p-2  border-2 border-stone-950 hover:shadow-lg hover:shadow-black transition-all duration-150 `}>
             <div className='w-full m-auto'>
                 
                     <div className="">
@@ -70,6 +62,7 @@ const PokeCard = (
     
        </div>
     )
+    
 }
 
-export default PokeCard
+export default FindedPoke
