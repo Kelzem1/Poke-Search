@@ -25,9 +25,9 @@ const ShowPokes = () =>{
   
 
     return( 
-            <>
+            <div className="h-dvh">
             <Search buscar={buscar} setBusq={setBusq} buscarPoke={buscarPoke}/>
-            <section className="grid grid-row-3">
+            <section className="">
             {pokeEncontrado 
             ?(  <div className="xl:m-18 h-full md:m-12 m-5 grid-rows-2 lg:grid-cols-3 xl:grid xl:grid-cols-4 md:grid md:grid-cols-2">
                 <PokeCard {...pokeEncontrado}/>
@@ -46,7 +46,7 @@ const ShowPokes = () =>{
             )   
             }
          </section>
-            </>
+            </div>
            
         
     )

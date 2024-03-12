@@ -12,12 +12,9 @@ const PokeCard = (
    
     return(
        
-        <div className={`bg-${color} rounded-md shadow-lg shadow-black flex-col m-5 p-5 border-2 border-stone-900 hover:shadow-lg hover:shadow-black transition-all duration-150 `}>
-            <div className='w-full m-auto'>
-                
-                    <div className="">
-                                     
-                        <div className="flex-col">
+        <div className={`bg-${color} rounded-md h-5/5 box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); flex-col m-5 p-5 border-2 border-stone-900  transition-all duration-150 `}>
+                     
+                        <div className="flex-col 3/5">
 
                                 <div className='h-full w-full'>
                                     <h1 className="text-neutral-950/10 font-Poppins font-extrabold xl:text-8xl text-7xl text-center h-full w-full">#{id}</h1>  
@@ -29,16 +26,14 @@ const PokeCard = (
 
                                 <div className='flex justify-center align-middle m-2'>
                                    <h1 className="text-neutral-950/80 font-extrabold text-center capitalize text-3xl md:text-3xl xl:text-4xl">{name}</h1> 
-                                </div>
-                                 
-                                                                           
+                                </div>                                              
                         </div>   
                              
-                     </div>
+                    
 
-            <div className="grid grid-row gap-1">
+            <div className="grid grid-row m-auto w-full h-1/4">
 
-                <div className='h-30 gap-3 grid grid-cols-2 xl:grid-cols-4 m-2 align-middle justify-center text-center'>
+                <div className='h-1/2 gap-3 grid grid-cols-2 xl:grid-cols-4 m-2 align-middle justify-center text-center'>
 
                             <div className=''>
                             <h2  className={statsStyle}> Type:<br />{tipo}</h2>
@@ -54,7 +49,7 @@ const PokeCard = (
                             </div>
                 </div>
 
-                <div className='flex-col font-bold text-md w-full h-full flex justify-center m-auto'>
+                <div className='flex-col font-bold text-md w-full h-1/4 flex justify-center m-auto'>
                     <h3>Hp: {hp} <progress value={hp} max={110} /></h3>
                     <h3>Attack: {attack}<progress value={attack} max={110} /></h3>
                     <h3>Defense: {defense}<progress value={defense} max={110} /></h3>
@@ -68,7 +63,7 @@ const PokeCard = (
 
         </div>
     
-       </div>
+       
     )
 }
 
