@@ -6,7 +6,7 @@ import Header from './Components/Header'
 function App() {
   
   return (
-    <main className='bg-neutral-300 h-4/5'>
+    <main className='bg-slate-600 h-full'>
     <Header />
     <ShowPokes />
     </main>

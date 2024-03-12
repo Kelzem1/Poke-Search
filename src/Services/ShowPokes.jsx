@@ -27,14 +27,14 @@ const ShowPokes = () =>{
     return( 
             <>
             <Search buscar={buscar} setBusq={setBusq} buscarPoke={buscarPoke}/>
-            <section className="h-full">
+            <section className="grid grid-row-3">
             {pokeEncontrado 
-            ?(  <div className="xl:m-18 h-full md:m-12 m-6 grid-rows-2 lg:grid-cols-3 xl:grid xl:grid-cols-4 md:grid md:grid-cols-2">
+            ?(  <div className="xl:m-18 h-full md:m-12 m-5 grid-rows-2 lg:grid-cols-3 xl:grid xl:grid-cols-4 md:grid md:grid-cols-2">
                 <PokeCard {...pokeEncontrado}/>
                 </div>
                 ) :(
                 <InfiniteScroll
-            className="xl:m-18 md:m-12 m-6 lg:grid-cols-3 xl:grid xl:grid-cols-4 md:grid md:grid-cols-2"
+            className="xl:m-18 md:m-12 m-6 lg:grid-cols-3 xl:grid xl:grid-cols-3 md:grid md:grid-cols-2"
             dataLength={pokeName.length}
             next={masPokemons}
             hasMore={verMas}

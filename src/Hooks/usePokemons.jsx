@@ -16,12 +16,12 @@ function usePokemons() {
         const speciesRes = await fetch(poke.species.url)
         const speciesData = await speciesRes.json()
         const color = speciesData.color.name
-        
+        console.log(poke)
        
         return {
             id: poke.id,
             name: poke.name,
-            img: poke.sprites.versions["generation-v"]["black-white"].animated.front_default || poke.sprites.front_default,
+            img: poke.sprites.versions["generation-v"]["black-white"].animated.front_shiny || poke.sprites.front_default,
             tipo: poke.types[0].type.name,
             height: poke.height,
             weight: poke.weight,

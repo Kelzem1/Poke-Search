@@ -12,7 +12,7 @@ const PokeCard = (
    
     return(
        
-        <div className={`bg-${color} rounded-md shadow-md shadow-black flex-col m-6 p-5  border-2 border-stone-950 hover:shadow-lg hover:shadow-black transition-all duration-150 `}>
+        <div className={`bg-${color} rounded-md shadow-lg shadow-black flex-col m-5 p-5 border-2 border-stone-900 hover:shadow-lg hover:shadow-black transition-all duration-150 `}>
             <div className='w-full m-auto'>
                 
                     <div className="">
@@ -36,9 +36,9 @@ const PokeCard = (
                              
                      </div>
 
-            <div className="grid grid-row gap-3 p-1">
+            <div className="grid grid-row gap-1">
 
-                <div className=' gap-1 grid grid-cols-4 m-auto align-middle justify-center text-center'>
+                <div className='h-30 gap-3 grid grid-cols-2 xl:grid-cols-4 m-2 align-middle justify-center text-center'>
 
                             <div className=''>
                             <h2  className={statsStyle}> Type:<br />{tipo}</h2>
