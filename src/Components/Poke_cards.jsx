@@ -7,7 +7,7 @@ const PokeCard = (
     const PesoReal = (weight / 10).toFixed(1)
     const AltuReal = (height / 10).toFixed(1)
 
-    const statsStyle = `text-${color} capitalize p-2 bg-black/70 rounded-md`
+    const statsStyle = `text-${color} capitalize p-3 bg-black/80 rounded-md`
  
    
     return(
@@ -17,14 +17,14 @@ const PokeCard = (
                 
                     <div className="">
                                      
-                        <div className="relative">
+                        <div className="flex-col">
 
-                                <div className='h-full'>
-                                    <h1 className="text-neutral-950/10 transition-all font-Poppins font-extrabold xl:text-8xl text-7xl text-center absolute h-full w-full bottom-20">#{id}</h1>  
+                                <div className='h-full w-full'>
+                                    <h1 className="text-neutral-950/10 font-Poppins font-extrabold xl:text-8xl text-7xl text-center h-full w-full">#{id}</h1>  
                                 </div>
 
-                                <div className='flex justify-center w-72 h-44 m-auto mt-20'>
-                                    <img className="hover:drop-shadow-2xl  transition-all content-center w-44 h-40" src={img} alt={id}></img>
+                                <div className='flex justify-center w-full h-full m-auto'>
+                                    <img className="hover:drop-shadow-2xl  transition-all content-center w-48 h-48" src={img} alt={id}></img>
                                 </div>
 
                                 <div className='flex justify-center align-middle m-2'>
@@ -38,7 +38,7 @@ const PokeCard = (
 
             <div className="grid grid-row gap-3 p-1">
 
-                <div className='text-sm w-full font-bold gap-1 grid grid-cols-4 m-auto object-cover align-middle justify-center text-center'>
+                <div className=' gap-1 grid grid-cols-4 m-auto align-middle justify-center text-center'>
 
                             <div className=''>
                             <h2  className={statsStyle}> Type:<br />{tipo}</h2>
