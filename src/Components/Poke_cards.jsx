@@ -7,59 +7,37 @@ const PokeCard = (
     const PesoReal = (weight / 10).toFixed(1)
     const AltuReal = (height / 10).toFixed(1)
 
-    const statsStyle = `text-${color} capitalize p-3 bg-black/80 rounded-md`
  
    
     return(
        
-        <div className={`bg-${color} rounded-md h-5/5 box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); flex-col m-5 p-5 border-2 border-stone-900  transition-all duration-150 `}>
+        <div className={`bg-${color} flex w-[80%] justify-center h-30 align-middle m-auto rounded-xl`}>
                      
-                        <div className="flex-col 3/5">
+                <div className="flex justify-center w-full align-middle h-20 m-auto gap-10">
 
-                                <div className='h-full w-full'>
-                                    <h1 className="text-neutral-950/10 font-Poppins font-extrabold xl:text-8xl text-7xl text-center h-full w-full">#{id}</h1>  
+                                <div className='w-[20%] h-30 justify-center m-auto'>
+                                        <h1 className="xl:text-6xl text-3xl flex m-auto font-Poppins">#{id}</h1>  
                                 </div>
 
-                                <div className='flex justify-center w-full h-full m-auto'>
-                                    <img className="hover:drop-shadow-2xl  transition-all content-center w-48 h-48" src={img} alt={id}></img>
+                                <div className='w-30%] h-30 flex justify-center align-middle'>
+                                    <img className="drop-shadow-2xl shadow-slate-400 p-2 w-48 h-30" src={img} alt={id}></img>
+                                </div>
+                             
+
+                                <div className='flex w-[50%] h-30 justify-center align-middle m-auto'>
+                                   <h1 className="text-neutral-950/80 xl:w-96 h-30 font-extrabold text-left xl:p-4 capitalize md:text-4xl xl:text-4xl text-xl">{name}</h1>
                                 </div>
 
-                                <div className='flex justify-center align-middle m-2'>
-                                   <h1 className="text-neutral-950/80 font-extrabold text-center capitalize text-3xl md:text-3xl xl:text-4xl">{name}</h1> 
-                                </div>                                              
+                                 <div className='flex h-full w-[20%] justify-center m-auto align-middle rounded-r-full'>
+                            <h2  className={`capitalize rounded-r-lg bg-black text-${color} p-4`}><br/> {tipo}</h2>     
+                                     </div>
+                                             
                         </div>   
                              
-                    
 
-            <div className="grid grid-row m-auto w-full h-1/4">
-
-                <div className='h-1/2 gap-3 grid grid-cols-2 xl:grid-cols-4 m-2 align-middle justify-center text-center'>
-
-                            <div className=''>
-                            <h2  className={statsStyle}> Type:<br />{tipo}</h2>
-                            </div>
-                            <div className=''>
-                                <h2 className={statsStyle}>Ability:<br />{abilities}</h2>
-                            </div>
-                            <div className=''>
-                                <h2  className={statsStyle}>Height:<br /> {AltuReal} mtrs</h2>
-                            </div>
-                            <div className=''>
-                                <h2 className={statsStyle}>Weight:<br /> {PesoReal} Kgs</h2>
-                            </div>
-                </div>
-
-                <div className='flex-col font-bold text-md w-full h-1/4 flex justify-center m-auto'>
-                    <h3>Hp: {hp} <progress value={hp} max={110} /></h3>
-                    <h3>Attack: {attack}<progress value={attack} max={110} /></h3>
-                    <h3>Defense: {defense}<progress value={defense} max={110} /></h3>
-                    <h3>Special Attack: {specialAttack}<progress value={specialAttack} max={110} /></h3>
-                    <h3>Special Defense: {specialDefense}<progress value={specialDefense} max={110} /></h3>
-                    <h3>Speed: {speed}<progress value={speed} max={110} /></h3>
-                </div>
                 
+               
                 
-            </div>
 
         </div>
     
