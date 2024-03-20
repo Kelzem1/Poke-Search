@@ -35,7 +35,7 @@ const ShowPokes = () =>{
                 </div>
                 ) :(
                 <InfiniteScroll
-            className="grid grid-cols1 gap-3 m-5 mt-20"
+            className="grid grid-cols1 gap-2 m-2 mt-20"
             dataLength={pokeName.length}
             next={masPokemons}
             hasMore={verMas}

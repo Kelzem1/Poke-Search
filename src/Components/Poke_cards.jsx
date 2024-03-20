@@ -11,12 +11,12 @@ const PokeCard = (
    
     return(
        
-        <div className={`bg-${color} flex w-[23em] xl:w-[42em] md:w-[25em] justify-center h-full align-middle m-auto rounded-xl`}>
+        <div className={`bg-${color} flex min-w-80 w-[22em] xl:w-[42em] md:w-[25em] justify-center h-full align-middle m-auto rounded-xl`}>
                      
-                <div className="flex justify-center w-full align-middle m-3 h-20 gap-5">
+                <div className="flex justify-center w-full align-middle h-20 gap-2">
 
                                 <div className='w-30 justify-center m-auto'>
-                                        <h1 className="xl:text-6xl text-3xl flex m-auto font-Poppins">#{id}</h1>  
+                                        <h1 className="xl:text-6xl text-[2em] flex m-2 font-Poppins">#{id}</h1>  
                                 </div>
 
                                 <div className='w-20 flex justify-center align-middle'>
@@ -25,7 +25,7 @@ const PokeCard = (
                              
 
                                 <div className='flex w-20 justify-center align-middle m-auto'>
-                                   <h1 className="text-neutral-950/80 end-1 xl:w-72 xl:h-30 font-extrabold text-left xl:p-2 capitalize md:text-2xl xl:text-4xl text-xl">{name}</h1>
+                                   <h1 className="text-neutral-950/80 end-1 xl:w-72 xl:h-30 font-extrabold text-left xl:p-2 capitalize md:text-2xl xl:text-4xl text-lg">{name}</h1>
                                 </div>
 
                                  <div className='flex w-30 justify-end m-auto align-middle rounded-r-full'>
