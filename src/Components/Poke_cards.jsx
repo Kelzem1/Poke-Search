@@ -11,25 +11,25 @@ const PokeCard = (
    
     return(
        
-        <div className={`bg-${color} flex w-[80%] justify-center h-30 align-middle m-auto rounded-xl`}>
+        <div className={`bg-${color} flex w-[23em] xl:w-[42em] md:w-[25em] justify-center h-full align-middle m-auto rounded-xl`}>
                      
-                <div className="flex justify-center w-full align-middle h-20 m-auto gap-10">
+                <div className="flex justify-center w-full align-middle m-3 h-20 gap-5">
 
-                                <div className='w-[20%] h-30 justify-center m-auto'>
+                                <div className='w-30 justify-center m-auto'>
                                         <h1 className="xl:text-6xl text-3xl flex m-auto font-Poppins">#{id}</h1>  
                                 </div>
 
-                                <div className='w-30%] h-30 flex justify-center align-middle'>
-                                    <img className="drop-shadow-2xl shadow-slate-400 p-2 w-48 h-30" src={img} alt={id}></img>
+                                <div className='w-20 flex justify-center align-middle'>
+                                    <img className="drop-shadow-2xl shadow-slate-400 p-2 w-full h-20" src={img} alt={id}></img>
                                 </div>
                              
 
-                                <div className='flex w-[50%] h-30 justify-center align-middle m-auto'>
-                                   <h1 className="text-neutral-950/80 xl:w-96 h-30 font-extrabold text-left xl:p-4 capitalize md:text-4xl xl:text-4xl text-xl">{name}</h1>
+                                <div className='flex w-20 justify-center align-middle m-auto'>
+                                   <h1 className="text-neutral-950/80 end-1 xl:w-72 xl:h-30 font-extrabold text-left xl:p-2 capitalize md:text-2xl xl:text-4xl text-xl">{name}</h1>
                                 </div>
 
-                                 <div className='flex h-full w-[20%] justify-center m-auto align-middle rounded-r-full'>
-                            <h2  className={`capitalize rounded-r-lg bg-black text-${color} p-4`}><br/> {tipo}</h2>     
+                                 <div className='flex w-30 justify-end m-auto align-middle rounded-r-full'>
+                            <h2  className={`capitalize justify-end rounded-r-lg w-20 bg-black text-${color} p-4`}><br/> {tipo}</h2>     
                                      </div>
                                              
                         </div>   
