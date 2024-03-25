@@ -28,9 +28,9 @@ const ShowPokes = () =>{
     return( 
             <div className="h-full">
             <Search buscar={buscar} setBusq={setBusq} buscarPoke={buscarPoke}/>
-            <section className="h-full">
+            <section className="">
             {pokeEncontrado 
-            ?(  <div className="grid grid-cols1 gap-3 mt-10">
+            ?(  <div className="h-screen flex align-middle justify-center">
                 <PokeCard {...pokeEncontrado}/>
                 </div>
                 ) :(
