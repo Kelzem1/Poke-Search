@@ -23,10 +23,15 @@ const ShowPokes = () =>{
         }
         console.log(pokeS)
     }
+
+    const [show, setShow] = useState({show: false, pokemon: {}})
+    const showPoke = (pokemon) => setShow({show: true, pokemon})
+    const notShowPoke = () => setShow({show: false, pokemon:{}})
   
 
     return( 
             <div className="h-full">
+            <PokeList {...show} cerrar={notShowPoke} />
             <Search buscar={buscar} setBusq={setBusq} buscarPoke={buscarPoke}/>
             <section className="">
             {pokeEncontrado 
@@ -34,7 +39,7 @@ const ShowPokes = () =>{
                 <PokeCard {...pokeEncontrado}/>
                 </div>
                 ) :(
-                <InfiniteScroll
+            <InfiniteScroll
             className="grid grid-cols1 gap-2 m-2 mt-20"
             dataLength={pokeName.length}
             next={masPokemons}
@@ -42,7 +47,7 @@ const ShowPokes = () =>{
             loader={<h3>Loading...</h3>}
             endMessage={<h3>No more Pokemons</h3>}
             >       
-                {pokeName.map(pokemon =><PokeCard key={pokemon.name} {...pokemon} />)}
+                {pokeName.map(pokemon =><PokeCard key={pokemon.name} {...pokemon} showPoke={()=> showPoke(pokemon)} />)}
                 
             
                  
