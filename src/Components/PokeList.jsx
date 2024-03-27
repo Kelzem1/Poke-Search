@@ -4,7 +4,7 @@ const PokeList = (show, pokemon, cerrar) =>{
     //const AltuReal = (height / 10).toFixed(1)
 
     return(
-        <div className="container text-white" onClick={cerrar} style={{ display: show ? 'block' : 'none'}}>
+        <div onClick={cerrar} className={`fixed inset-0 justify-center items-center transition-colors ${show ? "visible bg-black/20" : "invisible"}`} >
             <h1>Modal</h1>
             <img src={pokemon.img} />
         </div>
