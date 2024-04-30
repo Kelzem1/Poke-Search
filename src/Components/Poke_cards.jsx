@@ -5,14 +5,11 @@ const PokeCard = (
     ) => {
     
    
-
- 
-   
     return(
        
-        <div onClick={showPoke} className={`bg-${color} flex cursor-pointer min-w-80 w-[24em] xl:w-[44em] md:w-[30em] justify-center align-middle m-auto rounded-xl`}>
+        <div onClick={showPoke} className={`bg-${color} flex cursor-pointer justify-center align-middle m-auto`}>
                      
-                <div className="flex justify-center w-full align-middle xl:h-30 h-20 gap-2" >
+                <div className="flex justify-center align-middle xl:h-30 h-20 gap-2" >
 
                                 <div className='w-30 justify-left m-2'>
                                         <h1 className="xl:text-6xl text-[2em] flex m-2 font-Poppins">#{id}</h1>  
@@ -28,15 +25,10 @@ const PokeCard = (
                                 </div>
 
                                  <div className='flex xl:m-2 xl:w-full w-20 m-1 justify-center align-middle'>
-                                <h2  className={` flex justify-center align-middle m-auto capitalize rounded-md xl:w-14 h-12 w-full p-1 bg-stone-900/50 text-${color} p-4`}> {tipo}</h2>   
+                                <h2  className={` flex justify-center align-middle m-auto capitalize xl:w-14 h-12 w-full p-1 bg-stone-900/50 text-${color} p-4`}> {tipo}</h2>   
                                      </div>
                                              
-                </div>   
-                             
-
-                
-               
-                
+                </div>  
 
         </div>
     

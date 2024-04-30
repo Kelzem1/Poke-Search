@@ -35,7 +35,7 @@ const ShowPokes = () =>{
             <Search buscar={buscar} setBusq={setBusq} buscarPoke={buscarPoke}/>
             <section className="">
             {pokeEncontrado 
-            ?(  <div className="h-screen flex align-middle justify-center">
+            ?(  <div className="h-full flex align-middle justify-center">
                 <PokeCard {...pokeEncontrado}/>
                 </div>
                 ) :(
