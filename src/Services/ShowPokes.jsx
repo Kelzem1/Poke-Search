@@ -4,7 +4,7 @@ import usePokemons from "../Hooks/usePokemons";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Search from "../Components/Search";
 import { useState } from "react";
-import PokeList from "../Components/PokeList";
+import PokeList from "../Components/Modal";
 
 const ShowPokes = () =>{
 
@@ -30,7 +30,7 @@ const ShowPokes = () =>{
   
 
     return( 
-            <div className="h-full">
+            <div className="flex flex-col justify-center m-auto w-[90%]">
             <PokeList {...show} cerrar={notShowPoke} />
             <Search buscar={buscar} setBusq={setBusq} buscarPoke={buscarPoke}/>
             <section className="">
@@ -40,7 +40,7 @@ const ShowPokes = () =>{
                 </div>
                 ) :(
             <InfiniteScroll
-            className="grid grid-cols1 gap-2 m-2 mt-20"
+            className="grid grid-cols-3 gap-2 m-auto mt-20"
             dataLength={pokeName.length}
             next={masPokemons}
             hasMore={verMas}

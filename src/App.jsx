@@ -6,7 +6,7 @@ import ShowPokes from './Services/ShowPokes'
 function App() {
   
   return (
-    <main className='bg-black flex m-auto justify-center'>
+    <main className='bg-black'>
     <Header />
     <ShowPokes />
     </main>
