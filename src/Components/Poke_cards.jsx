@@ -7,7 +7,7 @@ const PokeCard = (
    
     return(
        
-        <div onClick={showPoke} className={`bg-${color} rounded-lg flex cursor-pointer justify-center align-middle m-auto`}>
+        <div onClick={showPoke} className={`bg-${color} rounded-lg flex cursor-pointer justify-center align-middle m-auto xl:mx-10`}>
                      
                 <div className="flex justify-center align-middle h-30" >
        
