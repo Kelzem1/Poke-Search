@@ -30,7 +30,7 @@ const ShowPokes = () =>{
   
 
     return( 
-            <div className="flex flex-col justify-center m-auto w-[90%]">
+            <div className="flex flex-col justify-center m-auto">
             <PokeList {...show} cerrar={notShowPoke} />
             <Search buscar={buscar} setBusq={setBusq} buscarPoke={buscarPoke}/>
             <section className="">
@@ -40,7 +40,7 @@ const ShowPokes = () =>{
                 </div>
                 ) :(
             <InfiniteScroll
-            className="grid grid-cols-3 gap-2 m-auto mt-20"
+            className="grid grid-cols-5 xl:grid-cols-6 gap-2 m-auto my-10"
             dataLength={pokeName.length}
             next={masPokemons}
             hasMore={verMas}

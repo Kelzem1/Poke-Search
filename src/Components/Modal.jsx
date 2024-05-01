@@ -5,8 +5,8 @@ const PokeList = (show, pokemon, cerrar) =>{
 
     return(
         <div onClick={cerrar} className={`fixed inset-0 justify-center items-center transition-colors ${show ? "visible bg-black/20" : "invisible"}`} >
-            <h1>Modal</h1>
-            <img src={pokemon.img} />
+            <h1 className="white">Modal</h1>
+            
         </div>
         // <div className={`bg-${color} rounded-md h-5/5 box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); flex-col m-5 p-5 border-2 border-stone-900  transition-all duration-150 `}>
                      

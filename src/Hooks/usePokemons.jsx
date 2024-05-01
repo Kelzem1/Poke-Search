@@ -21,7 +21,7 @@ function usePokemons() {
         return {
             id: poke.id,
             name: poke.name,
-            img: poke.sprites.versions["generation-v"]["black-white"].animated.front_default || poke.sprites.front_default,
+            img: poke.sprites.other['official-artwork'].front_default || poke.sprites.front_default,
             tipo: poke.types[0].type.name,
             height: poke.height,
             weight: poke.weight,
