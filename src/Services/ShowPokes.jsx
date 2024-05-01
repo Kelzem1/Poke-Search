@@ -35,7 +35,7 @@ const ShowPokes = () =>{
             <Search buscar={buscar} setBusq={setBusq} buscarPoke={buscarPoke}/>
             <section className="">
             {pokeEncontrado 
-            ?(  <div className="h-full flex align-middle justify-center">
+            ?(  <div className="h-full my-10 flex align-middle justify-center">
                 <PokeCard {...pokeEncontrado}/>
                 </div>
                 ) :(
@@ -48,9 +48,6 @@ const ShowPokes = () =>{
             endMessage={<h3>No more Pokemons</h3>}
             >       
                 {pokeName.map(pokemon =><PokeCard key={pokemon.name} {...pokemon} showPoke={()=> showPoke(pokemon)} />)}
-                
-            
-                 
             </InfiniteScroll> 
             )   
             }

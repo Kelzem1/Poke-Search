@@ -4,7 +4,7 @@ const PokeList = (show, pokemon, cerrar) =>{
     //const AltuReal = (height / 10).toFixed(1)
 
     return(
-        <div onClick={cerrar} className={`fixed inset-0 justify-center items-center transition-colors ${show ? "visible bg-black/20" : "invisible"}`} >
+        <div onClick={cerrar} className={`fixed inset-0 justify-center items-center transition-colors ${show ? "visible text-white" : "invisible"}`} >
             <h1 className="white">Modal</h1>
             
         </div>
