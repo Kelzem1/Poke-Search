@@ -1,13 +1,14 @@
 
 import './App.css'
-import Header from './Components/Header'
-import ShowPokes from './Services/ShowPokes'
+import { Footer } from './Components/SharedComponents/Footer'
+import Header from './Components/SharedComponents/Header'
 
 function App() {
   
   return (
     <main className='bg-black'>
-    <ShowPokes />
+    <Header />
+    <Footer />
     </main>
   )
 }

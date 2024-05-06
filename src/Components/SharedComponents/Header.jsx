@@ -1,4 +1,4 @@
-import ResetButton from "./ResetButton"
+
 import Search from "./Search"
 
 const Header = () =>{
