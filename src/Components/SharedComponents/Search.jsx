@@ -3,7 +3,7 @@
 const Search = ({buscar, setBusq, buscarPoke}) =>{
 
     return(
-        <form className="flex flex-row w-full bg-sky-800 shrink-0 h-36 justify-center drop-shadow-xl shadow-slate-200"
+        <form className="flex w-full bg-sky-800 shrink-0 h-36 justify-center"
             onSubmit={buscarPoke}>
             <input
             type="text"

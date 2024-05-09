@@ -1,4 +1,4 @@
-const PokeList = (show, pokemon, cerrar) =>{
+const Modal = (show, pokemon, cerrar) =>{
 
    // const PesoReal = (weight / 10).toFixed(1)
     //const AltuReal = (height / 10).toFixed(1)
